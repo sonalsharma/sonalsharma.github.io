@@ -1,0 +1,124 @@
+body {
+	margin: 0;
+	padding: 0;
+	font: normal 100%/1.5 Georgia,serif;
+	background-color: #c7c0ae;
+}
+
+img {
+	display: block;
+	margin: 0 auto;
+}
+
+section {
+	padding: 10rem 0;
+
+}
+
+.sun {
+
+	width:300px;
+}
+
+.sun-section {
+	background: transparent url("../img/mars-pano.jpg") no-repeat center top;
+	background-size: cover;
+}
+
+.dipper {
+	width: 200px;
+	opacity: 0;
+}
+
+.js-dipper-fade {
+
+    -webkit-animation: dipper-fade 1s linear forwards; /*animation fill mode: forwards. tells
+animation to stay at end state*/ }
+
+@-webkit-keyframes dipper-fade { 
+
+	0% {opacity: 0;}
+
+	100% {opacity: 1;}
+
+}
+
+.shuttle {
+	width:200px;
+	opacity: 0;
+}
+
+.shuttle-section {
+
+	background-color: #ffa500;
+}
+
+.js-shuttle-fade {
+	-webkit-animation: shuttle-fade 1s linear forwards;
+
+}
+
+	@-webkit-keyframes shuttle-fade {
+		0% {
+			opacity:0;
+			transform: translateY(100px);
+		}
+
+		100% {
+			opacity:1;
+		}
+
+}
+
+.spaceship {
+	width:200px;
+	display: inline-block;
+	margin:0.5em 1.5%;
+}
+
+.ship-section {
+
+	text-align: center;
+	background: transparent url("../img/kasei-valles-canyons.jpg") no-repeat center top;
+	background-size: cover;
+
+}
+
+.js-ship-fade {
+
+	-webkit-animation: ship-fade 1s linear forwards;
+
+}
+
+	@-webkit-keyframes ship-fade {
+		0% {
+			opacity:0;
+			transform: translateY(100px);
+		}
+
+		100% {
+			opacity:1;
+		}
+
+}
+
+.ship-3 {
+-webkit-animation: ship-fade 1s linear forwards;
+animation-delay: -2s;
+
+}
+
+	@-webkit-keyframes ship-fade {
+		0% {
+			opacity:0;
+			transform: translateY(100px);
+		}
+
+		100% {
+			opacity:1;
+		}
+
+}
+
+}
+
