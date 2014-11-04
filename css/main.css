@@ -1,8 +1,8 @@
 body {
 	margin: 0;
-	padding: 0;
-	font: normal 100%/1.5 Georgia,serif;
-	background-color: #c7c0ae;
+	padding: 1em 3em;
+	background-color: #fff;
+	font-family: 'Roboto', sans-serif;
 }
 
 img {
@@ -10,115 +10,35 @@ img {
 	margin: 0 auto;
 }
 
-section {
-	padding: 10rem 0;
-
+/*Strip the ul of padding and list styling*/
+ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
 }
 
-.sun {
-
-	width:300px;
+/*Create a horizontal list with spacing*/
+li {
+	display:inline-block;
+	float: left;
+	margin-right: 1px;
 }
 
-.sun-section {
-	background: transparent url("../img/mars-pano.jpg") no-repeat center top;
-	background-size: cover;
+.nav {
+	float: right;
 }
-
-.dipper {
-	width: 200px;
-	opacity: 0;
-}
-
-.js-dipper-fade {
-
-    -webkit-animation: dipper-fade 1s linear forwards; /*animation fill mode: forwards. tells
-animation to stay at end state*/ }
-
-@-webkit-keyframes dipper-fade { 
-
-	0% {opacity: 0;}
-
-	100% {opacity: 1;}
-
-}
-
-.shuttle {
-	width:200px;
-	opacity: 0;
-}
-
-.shuttle-section {
-
-	background-color: #ffa500;
-}
-
-.js-shuttle-fade {
-	-webkit-animation: shuttle-fade 1s linear forwards;
-
-}
-
-	@-webkit-keyframes shuttle-fade {
-		0% {
-			opacity:0;
-			transform: translateY(100px);
-		}
-
-		100% {
-			opacity:1;
-		}
-
-}
-
-.spaceship {
-	width:200px;
-	display: inline-block;
-	margin:0.5em 1.5%;
-}
-
-.ship-section {
-
+/*Style for menu links*/
+.nav li a {
+	display:inline-block;
+	min-width:100px;
+	height: 50px;
 	text-align: center;
-	background: transparent url("../img/kasei-valles-canyons.jpg") no-repeat center top;
-	background-size: cover;
-
+	line-height: 50px;
+	color: #000;
+	text-decoration: none;
 }
 
-.js-ship-fade {
-
-	-webkit-animation: ship-fade 1s linear forwards;
-
+/*Hover state for top level links*/
+.nav li:hover a {
+	border-bottom: 1px solid #000;
 }
-
-	@-webkit-keyframes ship-fade {
-		0% {
-			opacity:0;
-			transform: translateY(100px);
-		}
-
-		100% {
-			opacity:1;
-		}
-
-}
-
-.ship-3 {
--webkit-animation: ship-fade 1s linear forwards;
-animation-delay: -2s;
-
-}
-
-	@-webkit-keyframes ship-fade {
-		0% {
-			opacity:0;
-			transform: translateY(100px);
-		}
-
-		100% {
-			opacity:1;
-		}
-
-}
-
-}
-
