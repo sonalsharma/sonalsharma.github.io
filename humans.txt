@@ -1,0 +1,22 @@
+# TEAM
+
+Designer & developer: Sonal Sharma
+Site: http://sonalsharma.ca
+Github: http://github.com/sonalsharma
+Twitter: @sharmasonalx
+Email: info@sonalsharma.ca
+Location: Ottawa, Canada
+
+---
+
+# THANKS
+
+THANKS TO MAHSELF.
+
+---
+
+# TECHNOLOGY
+
+- Sublime Text
+- Github
+- My brain
