@@ -334,14 +334,18 @@ h2 {
 
 .work {
 	height:1400px;
+	text-align: center;
+}
+
+.work h2 {
+	text-transform: uppercase;
+	font-weight: normal;
 }
 
 /* work grid */
 
 .container {
 	width: 100%;
-	position: relative;
-	margin-top: -2em;
 }
 
 .container > header {
@@ -381,5 +385,16 @@ h2 {
 .contact {
 	background: transparent url("../img/headerbg.jpg") no-repeat center top;
 	background-size: cover;
+	text-align: center;
+}
+
+.contact h2 {
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: normal;
+	display: inline;
+	border: 1px solid #fff;
+	padding:0.5em;
+
 }
 
