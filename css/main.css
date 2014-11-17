@@ -270,6 +270,7 @@ h2 {
 	height:65px;
 	top:0;
 	opacity: 0.6;
+	z-index: 999;
 }
 
 .masthead.scrolling {
@@ -281,16 +282,17 @@ h2 {
 	background: transparent url("../img/headerbg.jpg") no-repeat center top;
 	background-size: cover; 
 	height:740px;
+	text-align: center;
 }
 
+
 .welcome p {
-	text-align: center;
 	color: #fff;
 }
 
 .name {
 	font-size: 5em;
-	margin-top: 2em;
+	margin-top: 1.5em;
 	line-height: 1em;
 }
 
@@ -299,10 +301,32 @@ h2 {
 	line-height: 1.5em;
 }
 
+@include keyframes(bounce) {
+	0%, 20%, 50%, 80%, 100% {
+    @include transform(translateY(0));
+  }
+	40% {
+    @include transform(translateY(-30px));
+  }
+	60% {
+    @include transform(translateY(-15px));
+  }
+}
+
+.arrow {
+	width:60px;
+	margin-top: 14em;
+}
+
+.bounce {
+  @include animation(bounce 2s infinite);
+}
+
 .about {
 	height: 600px;
 	background: transparent url("../img/dust.png") repeat;
 	padding:2em 10em;
+	overflow: hidden;
 }
 
 
@@ -335,11 +359,14 @@ h2 {
 .work {
 	height:1400px;
 	text-align: center;
+	overflow: hidden;
 }
 
 .work h2 {
 	text-transform: uppercase;
 	font-weight: normal;
+	margin-top: -2em;
+	margin-bottom: 2em;
 }
 
 /* work grid */
