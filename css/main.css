@@ -688,23 +688,56 @@ header h1 {
 }
 
 .arrow {
+	position: relative;
 	width:60px;
 	margin-top: 14em;
+	top:1em;
+}
+
+.bounce {
+ -webkit-animation-name: bounce;
+ -moz-animation-name: bounce;
+ -webkit-animation-duration: 0.5s;
+ -moz-animation-duration: 0.5s;
+ -webkit-animation-iteration-count: infinite;
+ -moz-animation-iteration-count: infinite;
+ -webkit-animation-direction: alternate;
+ -moz-animation-direction: alternate;
+ -webkit-animation-timing-function: eaze-in-out;
+ -moz-animation-timing-function: eaze-in-out;
+ }
+ 
+ 
+ @-webkit-keyframes bounce {
+  from { top: 1em; }
+  to { top: 2em; }
+ }
+
+@-moz-keyframes bounce {
+  from { top: 1em; }
+  to { top: 2em; }
 }
 
 .about {
-	background: transparent url("../img/girl.jpg") no-repeat center top;
+	background: transparent url("../img/snow2.jpg") no-repeat center top;
 	background-size: cover; 
 	padding:5em 10em;
 	overflow: hidden;
 	color: #000;
 }
 
+.about h2 {
+
+	text-transform: uppercase;
+
+}
+
 
 .about p {
 	position: relative;
-	line-height: 1.75em;
-	font-size: 1.055em;
+	line-height: 2em;
+	font-size: 1.1em;
+	font-weight: 400;
 	margin-top: 1em;
 }
 
@@ -1045,7 +1078,7 @@ header h1 {
 	-webkit-transition-delay: 100ms;
 	-moz-transition-delay: 100ms;
 	transition-delay: 100ms;
-	z-index: 100;
+	z-index: 1;
 }
  
 .og-grid figcaption p {
