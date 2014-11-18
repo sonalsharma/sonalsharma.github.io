@@ -353,6 +353,16 @@ header h1 {
   border-bottom: none;
 }
 @media only screen and (min-width: 740px) {
+
+	#cd-nav li:first-child {
+		display: none;
+	}
+	
+
+	header {
+		display: block;
+	}
+
   #cd-nav ul {
     /* the navigation moves to the top */
     position: absolute;
@@ -558,6 +568,19 @@ header h1 {
     animation: cd-bounce-in 0.3s linear;
   }
 }
+
+@media only screen and (min-width: 20em) {
+	header {
+		display: none;
+	}
+
+}
+
+@media only screen and (min-width: 740px) {
+	header {
+		display: block;
+	}
+	}
 
 
 
