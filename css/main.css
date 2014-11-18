@@ -562,19 +562,6 @@ header h1 {
   }
 }
 
-@media only screen and (min-width: 20em) {
-	header {
-		display: none;
-	}
-
-}
-
-@media only screen and (min-width: 1024px) {
-	header {
-		display: block;
-	}
-	}
-
 
 
 @-webkit-keyframes cd-slide-in {
@@ -740,90 +727,6 @@ header h1 {
 	font-weight: 400;
 	margin-top: 1em;
 }
-
-@media only screen and (min-width: 20em) {
-	.welcome {
-		padding:2em;
-	}
-
-	.about {
-		padding:2em 1em;
-	}
-
-	.unit-xs-1-2 {
-		width:100%;
-	}
-
-	.work h4 {
-		line-height: 4em;
-	}
-	}
-
-	@media only screen and (min-width: 35em) {
-	
-	.welcome {
-		padding:7em;
-	}
-
-	.about {
-		padding:2em 2em;
-	}
-
-	.unit-xs-1-2 {
-		width:100%;
-	}
-
-	.work h4 {
-		line-height: 4em;
-	}
-	}
-
-	@media only screen and (min-width: 40em) {
-	.about {
-		padding:2em 2em;
-		background-position:right top;
-	}
-
-	.unit-xs-1-2 {
-		width:66.666%;
-	}
-
-	.work h4 {
-		line-height: 4em;
-	}
-	}
-
-	@media only screen and (min-width: 1024px) {
-	.about {
-		padding:4em;
-		background-position:right top;
-	}
-
-	.unit-xs-1-2 {
-		width:60%;
-	}
-
-	.work h4 {
-		line-height: 4em;
-	}
-	}
-
-	@media only screen and (min-width: 1200px) {
-	.about {
-		padding:6em 0 6em 10em;
-		background-position:right top;
-	}
-
-	.unit-xs-1-2 {
-		width:50%;
-	}
-
-	.work h4 {
-		line-height: 4em;
-	}
-	}
-
-
 
 .ido {
 
@@ -1119,4 +1022,108 @@ header h1 {
 	padding:0.5em;
 
 }
+
+@media only screen and (min-width: 240px) {
+
+  header {
+    display: none;
+  }
+
+  .welcome {
+    padding:2em;
+  }
+
+  .name {
+    font-size: 3em;
+  }
+
+  .about {
+    padding:2em 1em;
+  }
+
+  .unit-xs-1-2 {
+    width:100%;
+  }
+
+  .work h4 {
+    line-height: 4em;
+  }
+
+  .ido {
+    padding:2em;
+  }
+
+  .ch-img-1 {
+    width:50%;
+  }
+  }
+
+  @media only screen and (min-width: 35em) {
+  
+  .welcome {
+    padding:7em;
+  }
+
+  .about {
+    padding:2em 2em;
+  }
+
+  .unit-xs-1-2 {
+    width:100%;
+  }
+
+  .work h4 {
+    line-height: 4em;
+  }
+  }
+
+  @media only screen and (min-width: 40em) {
+  .about {
+    padding:2em 2em;
+    background-position:right top;
+  }
+
+  .unit-xs-1-2 {
+    width:66.666%;
+  }
+
+  .work h4 {
+    line-height: 4em;
+  }
+  }
+
+  @media only screen and (min-width: 1024px) {
+
+      header {
+    display: block;
+  }
+
+  .about {
+    padding:4em;
+    background-position:right top;
+  }
+
+  .unit-xs-1-2 {
+    width:60%;
+  }
+
+  .work h4 {
+    line-height: 4em;
+  }
+  }
+
+  @media only screen and (min-width: 1200px) {
+  .about {
+    padding:6em 0 6em 10em;
+    background-position:right top;
+  }
+
+  .unit-xs-1-2 {
+    width:50%;
+  }
+
+  .work h4 {
+    line-height: 4em;
+  }
+  }
 
