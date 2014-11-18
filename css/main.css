@@ -45,9 +45,6 @@ h2 {
     clear: both;
 }
 
-.clearfix {
-    *zoom: 1;
-}
 
 /* GRID */
 
@@ -222,7 +219,7 @@ h2 {
 
 /* END GRID */
 
-}.cd-container {
+.cd-container {
   /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
   width: 90%;
   max-width: 1170px;
@@ -709,10 +706,6 @@ header h1 {
 .arrow {
 	width:60px;
 	margin-top: 14em;
-}
-
-.bounce {
-  @include animation(bounce 2s infinite);
 }
 
 .about {
