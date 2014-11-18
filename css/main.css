@@ -349,7 +349,7 @@ header h1 {
 #cd-nav li:last-child a {
   border-bottom: none;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1024px) {
 
 	#cd-nav li:first-child {
 		display: none;
@@ -569,7 +569,7 @@ header h1 {
 
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1024px) {
 	header {
 		display: block;
 	}
@@ -687,18 +687,6 @@ header h1 {
 	line-height: 1.5em;
 }
 
-@include keyframes(bounce) {
-	0%, 20%, 50%, 80%, 100% {
-    @include transform(translateY(0));
-  }
-	40% {
-    @include transform(translateY(-30px));
-  }
-	60% {
-    @include transform(translateY(-15px));
-  }
-}
-
 .arrow {
 	width:60px;
 	margin-top: 14em;
@@ -748,12 +736,58 @@ header h1 {
 	}
 	}
 
+	@media only screen and (min-width: 40em) {
+	.about {
+		padding:2em 2em;
+		background-position:right top;
+	}
+
+	.unit-xs-1-2 {
+		width:66.666%;
+	}
+
+	.work h4 {
+		line-height: 4em;
+	}
+	}
+
+	@media only screen and (min-width: 1024px) {
+	.about {
+		padding:4em;
+		background-position:right top;
+	}
+
+	.unit-xs-1-2 {
+		width:60%;
+	}
+
+	.work h4 {
+		line-height: 4em;
+	}
+	}
+
+	@media only screen and (min-width: 1200px) {
+	.about {
+		padding:6em 0 6em 10em;
+		background-position:right top;
+	}
+
+	.unit-xs-1-2 {
+		width:50%;
+	}
+
+	.work h4 {
+		line-height: 4em;
+	}
+	}
+
 
 
 .ido {
 
-	background-color: #000;
+	background-color: #211B05;
 	text-align: center;
+	padding:3em;
 
 }
 
@@ -892,6 +926,7 @@ header h1 {
 	text-align: center;
 	overflow: hidden;
 	padding-bottom:15em;
+	background: transparent url("../img/dust.png") repeat center top;
 }
 
 .work h2 {
