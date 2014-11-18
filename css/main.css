@@ -349,15 +349,10 @@ header h1 {
 #cd-nav li:last-child a {
   border-bottom: none;
 }
-@media only screen and (min-width: 740px) {
+@media only screen and (min-width: 800px) {
 
 	#cd-nav li:first-child {
 		display: none;
-	}
-	
-
-	header {
-		display: block;
 	}
 
   #cd-nav ul {
@@ -389,7 +384,8 @@ header h1 {
     color:#fff;
   }
   #cd-nav li a:hover {
-    color: #e84a64;
+    color: #BDB96F;
+    transition: all 250ms linear;
   }
   #cd-nav.is-fixed ul {
     /* when the user scrolls down, the navigation moves to the bottom right in Fixed position - as on touch devices */
@@ -573,7 +569,7 @@ header h1 {
 
 }
 
-@media only screen and (min-width: 740px) {
+@media only screen and (min-width: 800px) {
 	header {
 		display: block;
 	}
