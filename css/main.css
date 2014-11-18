@@ -678,7 +678,7 @@ header h1 {
 
 .name {
 	font-size: 6em;
-	margin-top: 0.5em;
+	margin-top: 0.75em;
 	line-height: 1em;
 }
 
@@ -709,6 +709,10 @@ header h1 {
 }
 
 @media only screen and (min-width: 20em) {
+	.welcome {
+		padding:2em;
+	}
+
 	.about {
 		padding:2em 1em;
 	}
@@ -723,6 +727,11 @@ header h1 {
 	}
 
 	@media only screen and (min-width: 35em) {
+	
+	.welcome {
+		padding:7em;
+	}
+
 	.about {
 		padding:2em 2em;
 	}
