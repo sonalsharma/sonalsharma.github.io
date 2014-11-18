@@ -239,9 +239,9 @@ Main components
 -------------------------------- */
 header {
   background: #000;
+  opacity: 0.7;
   text-align: center;
-  padding-top: 1em;
-  height:100px;
+  height:65px;
 }
 
 header h1 {
@@ -361,7 +361,7 @@ header h1 {
     width: auto;
     max-width: none;
     bottom: auto;
-    top: 36px;
+    top: 20px;
     background: transparent;
     visibility: visible;
     box-shadow: none;
