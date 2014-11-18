@@ -384,7 +384,7 @@ header h1 {
     color:#fff;
   }
   #cd-nav li a:hover {
-    color: #BDB96F;
+    color: #f4e6dc;
     transition: all 250ms linear;
   }
   #cd-nav.is-fixed ul {
