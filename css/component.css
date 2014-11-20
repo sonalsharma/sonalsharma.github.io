@@ -1,305 +1,195 @@
-.noscroll {
-	overflow: hidden;
-}
-
-.grid-wrap {
-	margin: 10px auto 0;
-	max-width: 1090px;
+.og-grid {
+	list-style: none;
+	padding: 20px 0;
+	margin: 0 auto;
+	text-align: center;
 	width: 100%;
-	padding: 0;
-	-webkit-perspective: 1500px;
-	perspective: 1500px;
 }
 
-.grid {
-	position: relative;
-	-webkit-transition: all 0.5s cubic-bezier(0,0,0.25,1);
-	transition: all 0.5s cubic-bezier(0,0,0.25,1);
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-}
-
-.view-full .grid {
-	-webkit-transform: translateZ(-1500px);
-	transform: translateZ(-1500px);
-}
-
-.grid figure,
-.grid .placeholder {
-	width: 300px;
+.og-grid li {
+	display: inline-block;
+	margin: 10px 5px 0 5px;
+	vertical-align: top;
 	height: 300px;
 }
 
-.grid figure {
-	margin: 10px;
-	display: inline-block;
-	cursor: pointer;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-}
-
-.grid figure.active {
-	opacity: 0;
-}
-
-.grid .placeholder {
-	pointer-events: none;
-	position: absolute;
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	-webkit-transition: all 0.5s ease-out;
-	transition: all 0.5s ease-out;
-}
-
-.placeholder > div {
+.og-grid li > a,
+.og-grid li > a img {
+	border: none;
+	outline: none;
 	display: block;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
+	position: relative;
 }
 
-.placeholder .front img {
-	width: 100%;
-	height: 100%;
-}
-
-.placeholder .back {
-	background: white;
-	-webkit-transform: rotateY(180deg);
-	transform: rotateY(180deg);
-}
-
-.view-full .placeholder {
-	-webkit-transition: all 0.5s 0.1s cubic-bezier(0,0,0.25,1);
-	transition: all 0.5s 0.1s cubic-bezier(0,0,0.25,1);
-}
-
-.vertical .view-full .placeholder {
-	-webkit-transform: translateZ(1500px) rotateX(-179.9deg);
-	transform: translateZ(1500px) rotateX(-179.9deg); /* FF, Chrome, can we agree on one direction, pleeease? */
-}
-
-.horizontal .view-full .placeholder {
-	-webkit-transform: translateZ(1500px) rotateY(-179.9deg);
-	transform: translateZ(1500px) rotateY(-179.9deg);
-}
-
-.grid figure img {
-	display: block;
-	width: 100%;
-}
-
-.content,
-.loading {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	pointer-events: none; /* Careful, does not work in IE < 11 http://caniuse.com/#search=pointer-events */
-}
-
-.content {
-	overflow-y: scroll;
-	height: 0; /* What seems to be the problem, officer? Well, we have a second scroll bar in Chrome! */
-	background: #fff;
-	visibility: hidden;
-	z-index: 400;
-	-webkit-overflow-scrolling: touch;
-}
-
-.loading {
-	opacity: 0;
-	z-index: 1;
-	background: transparent url("../img/preloader.gif") no-repeat center center;
-	-webkit-transform: scale(0.5);
-	transform: scale(0.5);
-	-webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
-	transition: opacity 0.5s, transform 0.5s;
-}
-
-.loading.show {
-	opacity: 1;
-	-webkit-transform: scale(1);
-	transform: scale(1);
-}
-
-.content.show {
-	height: auto;
-	pointer-events: auto;
-	visibility: visible;
-}
-
-.content > div {
-	z-index: 10;
-	position: absolute;
-	top: 0;
-	width: 100%;
-	overflow: hidden;
+.og-grid li.og-expanded > a::after {
+	top: auto;
+	border: solid transparent;
+	content: " ";
 	height: 0;
-	opacity: 0;
-	background: #fff;
-}
-
-.content > div.show {
-	height: auto;
-	opacity: 1;	
-	-webkit-transition: opacity 0.6s;
-	transition: opacity 0.6s;
-}
-
-.icon2:before {
-	font-family: 'fontawesome';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.close-content {
-	position: fixed;
-	z-index: 1000;
-	top: 0;
-	right: 10px;
-	font-size: 1.6em;
-	color: #aaa;
-	cursor: pointer;
+	width: 0;
+	position: absolute;
 	pointer-events: none;
-	padding: 1em;
-	opacity: 0;
-	-webkit-transition: opacity 0.3s;
-	transition: opacity 0.3s;
+	border-bottom-color: #ddd;
+	border-width: 15px;
+	left: 50%;
+	margin: -20px 0 0 -15px;
 }
 
-.close-content:hover {
+.og-expander {
+	position: absolute;
+	background: #ddd;
+	top: auto;
+	left: 0;
+	width: 100%;
+	margin-top: 10px;
+	text-align: left;
+	height: 0;
+	overflow: hidden;
+}
+
+.og-expander-inner {
+	padding: 50px 30px;
+	height: 100%;
+}
+
+.og-close {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+}
+
+.og-close::before,
+.og-close::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	height: 1px;
+	background: #888;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.og-close::after {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.og-close:hover::before,
+.og-close:hover::after {
+	background: #333;
+}
+
+.og-fullimg,
+.og-details {
+	width: 50%;
+	float: left;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.og-details {
+	padding: 0 40px 0 20px;
+}
+
+.og-fullimg {
+	text-align: center;
+}
+
+.og-fullimg img {
+	display: inline-block;
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.og-details h3 {
+	font-weight: 300;
+	font-size: 52px;
+	padding: 40px 0 10px;
+	margin-bottom: 10px;
+}
+
+.og-details p {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22px;
 	color: #999;
 }
 
-.content > div.show ~ .close-content {
-	opacity: 1;
-	pointer-events: auto;
+.og-details a {
+	font-weight: 700;
+	font-size: 16px;
+	color: #333;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding: 10px 20px;
+	border: 3px solid #333;
+	display: inline-block;
+	margin: 30px 0 0;
+	outline: none;
 }
 
-.close-content:before {
-	content: "\e602";
+.og-details a::before {
+	content: '\2192';
+	display: inline-block;
+	margin-right: 10px;
 }
 
-/* Dummy content */
-
-.dummy-img,
-.dummy-text {
-	max-width: 600px;
-	width: 90%;
-	opacity: 0;
-	-webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
-	transition: opacity 0.5s, transform 0.5s;
+.og-details a:hover {
+	border-color: #999;
+	color: #999;
 }
 
-.vertical .dummy-img,
-.vertical .dummy-text {
-	-webkit-transform: translateY(100px);
-	transform: translateY(100px);
+.og-loading {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #ddd;
+	box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ccc;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -25px 0 0 -25px;
+	-webkit-animation: loader 0.5s infinite ease-in-out both;
+	-moz-animation: loader 0.5s infinite ease-in-out both;
+	animation: loader 0.5s infinite ease-in-out both;
 }
 
-.horizontal .dummy-img,
-.horizontal .dummy-text {
-	-webkit-transform: translateX(-100px);
-	transform: translateX(-100px);
+@-webkit-keyframes loader {
+	0% { background: #ddd; }
+	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
 }
 
-.content > div.show .dummy-img,
-.content > div.show .dummy-text {
-	opacity: 1;
+@-moz-keyframes loader {
+	0% { background: #ddd; }
+	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
 }
 
-.vertical .content > div.show .dummy-img,
-.vertical .content > div.show .dummy-text {
-	-webkit-transform: translateY(0);
-	transform: translateY(0);
+@keyframes loader {
+	0% { background: #ddd; }
+	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
 }
 
-.horizontal .content > div.show .dummy-img,
-.horizontal .content > div.show .dummy-text {
-	-webkit-transform: translateX(0);
-	transform: translateX(0);
+@media screen and (max-width: 830px) {
+
+	.og-expander h3 { font-size: 32px; }
+	.og-expander p { font-size: 13px; }
+	.og-expander a { font-size: 12px; }
+
 }
 
-p.dummy-text:nth-child(2) {
-	-webkit-transition-delay: 0.1s;
-	transition-delay: 0.1s;
+@media screen and (max-width: 650px) {
+
+	.og-fullimg { display: none; }
+	.og-details { float: none; width: 100%; }
+	
 }
-
-p.dummy-text:nth-child(3) {
-	-webkit-transition-delay: 0.2s;
-	transition-delay: 0.2s;
-}
-
-.dummy-img {
-	height: 400px;
-	background-color: #ddd;
-	margin: 30px auto;
-}
-
-.dummy-text {
-	text-align: left;
-	margin: 0 auto;
-	padding: 10px 0;
-	color: #ddd;
-	font-size: 1em;
-	font-family: 'Blokk', Arial, serif;
-}
-
-.dummy-text:last-child {
-	padding-bottom: 100px;
-}
-
-/* Simple fallback */
-/* if any of these are not supported, a simple fallback will be shown */
-.no-pointerevents .content,
-.no-csstransforms3d .content,
-.no-csstransitions .content,
-.no-pointerevents .content > div,
-.no-csstransforms3d .content > div,
-.no-csstransitions .content > div,
-.no-pointerevents .close-content,
-.no-csstransforms3d .close-content,
-.no-csstransitions .close-content {
-	opacity: 1;
-	visibility: visible;
-	display: none;
-	height: auto;
-}
-
-.no-pointerevents .show .close-content,
-.no-csstransforms3d .show .close-content,
-.no-csstransition .show .close-content,
-.no-pointerevents div.show,
-.no-csstransforms3d div.show,
-.no-csstransitions div.show,
-.no-csstransitions .dummy-img,
-.no-csstransitions .dummy-text,
-.no-csstransforms3d .dummy-img,
-.no-csstransforms3d .dummy-text, 
-.no-pointerevents .dummy-img,
-.no-pointerevents .dummy-text {
-	display: block !important;
-	opacity: 1;
-}
-
-@media screen and (max-width: 1000px) {
-
-	.grid figure,
-	.grid .placeholder {
-		width: 240px;
-		height: 212px;
-	}
