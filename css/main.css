@@ -918,44 +918,6 @@ header h1 {
 	padding:1em;
 }
 
-/* work grid */
-
-.container {
-	width: 100%;
-}
-
-.container > header {
-	width: 90%;
-	max-width: 1240px;
-	margin: 0 auto;
-	position: relative;
-	padding: 0 30px 50px 30px;
-}
-
-.container > header {
-	padding: 60px 30px 50px;
-	text-align: center;
-}
-
-.container > header h1 {
-	font-size: 34px;
-	line-height: 38px;
-	margin: 0 auto;
-	font-weight: 700;
-	color: #333;
-}
-
-.container > header h1 span {
-	display: block;
-	font-size: 20px;
-	font-weight: 300;
-}
-
-.main > p {
-	text-align: center;
-	padding: 50px 20px;
-}
-
 /** hover effects **/
 
 .og-grid figure {
