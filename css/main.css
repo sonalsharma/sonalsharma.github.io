@@ -1,16 +1,7 @@
 body {
 	margin: 0;
-	background-color: #fff;
-	font-family: 'Lato', sans-serif;
-}
-
-/*img {
-	display: inline-block;
-	margin: 0 auto;
-}*/
-
-section {
-	padding: 10rem 0;
+	background-color: #f7f7f7;
+	font-family: 'Open Sans', sans-serif;
 }
 
 ul {
@@ -19,10 +10,6 @@ ul {
 	padding:0;
 }
 
-h2 {
-	font-size: 2em;
-	font-weight: bold;
-}
 
 *,
 *:after,
@@ -43,6 +30,28 @@ h2 {
 
 .clearfix:after {
     clear: both;
+}
+
+.temp {
+  background-color: #35404F;
+  padding:4.25em 10em;
+}
+
+.temp img {
+  width:200px;
+  height: 200px;
+  margin: 1em 0 2em;
+}
+
+.temp h1 {
+    font-size: 6.5em;
+    color: #fafafa;
+}
+
+.temp p {
+  font-size: 4.5em;
+  color: #fafafa;
+  margin-top: 1em;
 }
 
 
@@ -219,922 +228,282 @@ h2 {
 
 /* END GRID */
 
-.cd-container {
-  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
-  width: 90%;
-  max-width: 1170px;
-  margin: 0 auto;
-}
-.cd-container::after {
-  /* clearfix */
-  content: '';
-  display: table;
-  clear: both;
+.nav.scrolling {
+  background-color: #35404F;
+  transition: all 350ms linear;
+  opacity: 0.9;
+  height:70px;
+  padding: 0 6em;
 }
 
-/* -------------------------------- 
-
-Main components 
-
--------------------------------- */
-header {
-  background: #211B05;
-  /*opacity: 0.7;*/
-  text-align: center;
-  height:65px;
+.nav.scrolling li a {
+  color:#fff;
 }
 
-header h1 {
-  font-size: 20px;
-  font-size: 1.25rem;
-}
-
-  header #cd-logo {
-    position: absolute;
-    left: 5%;
-    width: 100px;
-  }
-
-  header h1 {
-    font-size: 40px;
-    font-size: 2.5rem;
-    font-weight: 300;
-  }
-
-  #cd-main-nav li a {
-
-  	text-decoration: none;
-
-  }
-
-#cd-nav ul {
-  /* mobile first */
+.nav{
   position: fixed;
-  width: 90%;
-  max-width: 400px;
-  right: 5%;
-  bottom: 20px;
-  border-radius: 0.25em;
-  box-shadow: 0 0 10px rgba(125, 112, 112, 0.5);
-  background: white;
-  visibility: hidden;
-  /* remove overflow:hidden if you want to create a drop-down menu - but then remember to fix/eliminate the list items animation */
-  overflow: hidden;
-  z-index: 100;
-  /* Force Hardware Acceleration in WebKit */
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  -o-transform: scale(0);
-  transform: scale(0);
-  -webkit-transform-origin: 100% 100%;
-  -moz-transform-origin: 100% 100%;
-  -ms-transform-origin: 100% 100%;
-  -o-transform-origin: 100% 100%;
-  transform-origin: 100% 100%;
-  -webkit-transition: -webkit-transform 0.3s, visibility 0s 0.3s;
-  -moz-transition: -moz-transform 0.3s, visibility 0s 0.3s;
-  transition: transform 0.3s, visibility 0s 0.3s;
-}
-#cd-nav ul li {
-	color:#fff;
-	text-transform: uppercase;
-  /* Force Hardware Acceleration in WebKit */
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-#cd-nav ul.is-visible {
-  visibility: visible;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: -webkit-transform 0.3s, visibility 0s 0s;
-  -moz-transition: -moz-transform 0.3s, visibility 0s 0s;
-  transition: transform 0.3s, visibility 0s 0s;
-}
-#cd-nav ul.is-visible li:nth-child(1) {
-  /* list items animation */
-  -webkit-animation: cd-slide-in 0.2s;
-  -moz-animation: cd-slide-in 0.2s;
-  animation: cd-slide-in 0.2s;
-}
-#cd-nav ul.is-visible li:nth-child(2) {
-  -webkit-animation: cd-slide-in 0.3s;
-  -moz-animation: cd-slide-in 0.3s;
-  animation: cd-slide-in 0.3s;
-}
-#cd-nav ul.is-visible li:nth-child(3) {
-  -webkit-animation: cd-slide-in 0.4s;
-  -moz-animation: cd-slide-in 0.4s;
-  animation: cd-slide-in 0.4s;
-}
-#cd-nav ul.is-visible li:nth-child(4) {
-  -webkit-animation: cd-slide-in 0.5s;
-  -moz-animation: cd-slide-in 0.5s;
-  animation: cd-slide-in 0.5s;
-}
-#cd-nav ul.is-visible li:nth-child(5) {
-  -webkit-animation: cd-slide-in 0.6s;
-  -moz-animation: cd-slide-in 0.6s;
-  animation: cd-slide-in 0.6s;
-}
-#cd-nav li a {
-  display: block;
-  padding: 1.6em;
-  color:#000;
-}
-#cd-nav li:last-child a {
-  border-bottom: none;
-}
-@media only screen and (min-width: 1024px) {
-
-	#cd-nav li:first-child {
-		display: none;
-	}
-
-  #cd-nav ul {
-    /* the navigation moves to the top */
-    position: absolute;
-    width: auto;
-    max-width: none;
-    bottom: auto;
-    top: 20px;
-    background: transparent;
-    visibility: visible;
-    box-shadow: none;
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: all 0s;
-    -moz-transition: all 0s;
-    transition: all 0s;
-  }
-  #cd-nav li {
-    display: inline-block;
-  }
-  #cd-nav li a {
-    opacity: 1;
-    padding: .4em;
-    margin-left: 1.6em;
-    color:#fff;
-  }
-  #cd-nav li a:hover {
-    color: #f4e6dc;
-    transition: all 250ms linear;
-  }
-  #cd-nav.is-fixed ul {
-    /* when the user scrolls down, the navigation moves to the bottom right in Fixed position - as on touch devices */
-    position: fixed;
-    width: 90%;
-    max-width: 400px;
-    bottom: 20px;
-    top: auto;
-    background: white;
-    visibility: hidden;
-    box-shadow: 0 0 10px rgba(31, 79, 59, 0.5);
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
-    transform: scale(0);
-  }
-  #cd-nav.is-fixed ul li {
-    display: block;
-  }
-  #cd-nav.is-fixed ul li a {
-    padding: 1.6em;
-    margin-left: 0;
-    border-bottom: 1px solid #eff2f6;
-    color:#000;
-  }
-  #cd-nav ul.has-transitions {
-    /* this class is used to bring back transitions when the navigation moves at the bottom right */
-    -webkit-transition: -webkit-transform 0.3s, visibility 0s 0.3s;
-    -moz-transition: -moz-transform 0.3s, visibility 0s 0.3s;
-    transition: transform 0.3s, visibility 0s 0.3s;
-  }
-  #cd-nav ul.is-visible {
-    /* this class is used to bring back the navigation animation - as on touch devices */
-    visibility: visible;
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: -webkit-transform 0.3s, visibility 0s 0s;
-    -moz-transition: -moz-transform 0.3s, visibility 0s 0s;
-    transition: transform 0.3s, visibility 0s 0s;
-  }
-  #cd-nav ul.is-hidden {
-    /* this class is used to animate the scale down the navigation when the user scrolls down with the navigation still open */
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
-    transform: scale(0);
-    -webkit-transition: -webkit-transform 0.3s;
-    -moz-transition: -moz-transform 0.3s;
-    transition: transform 0.3s;
-  }
-}
-
-.cd-nav-trigger {
-  position: fixed;
-  bottom: 20px;
-  right: 5%;
-  width: 44px;
-  height: 44px;
-  background: white;
-  border-radius: 0.25em;
-  box-shadow: 0 0 10px rgba(31, 79, 59, 0.5);
-  /* image replacement */
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
-  z-index: 102;
-}
-.cd-nav-trigger span {
-  /* the span element is used to create the menu icon */
-  position: absolute;
-  display: block;
-  width: 20px;
-  height: 2px;
-  background: #1F4F3B;
-  top: 50%;
-  margin-top: -1px;
-  left: 50%;
-  margin-left: -10px;
-  -webkit-transition: background 0.3s;
-  -moz-transition: background 0.3s;
-  transition: background 0.3s;
-}
-.cd-nav-trigger span::before, .cd-nav-trigger span::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  background: inherit;
   width: 100%;
-  height: 100%;
-  /* Force Hardware Acceleration in WebKit */
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transition: -webkit-transform 0.3s, background 0s;
-  -moz-transition: -moz-transform 0.3s, background 0s;
-  transition: transform 0.3s, background 0s;
-}
-.cd-nav-trigger span::before {
-  top: -6px;
-  -webkit-transform: rotate(0);
-  -moz-transform: rotate(0);
-  -ms-transform: rotate(0);
-  -o-transform: rotate(0);
-  transform: rotate(0);
-}
-.cd-nav-trigger span::after {
-  bottom: -6px;
-  -webkit-transform: rotate(0);
-  -moz-transform: rotate(0);
-  -ms-transform: rotate(0);
-  -o-transform: rotate(0);
-  transform: rotate(0);
-}
-.cd-nav-trigger.menu-is-open {
-  box-shadow: none;
-}
-.cd-nav-trigger.menu-is-open span {
-  background: rgba(232, 74, 100, 0);
-}
-.cd-nav-trigger.menu-is-open span::before, .cd-nav-trigger.menu-is-open span::after {
-  background: #e84a64;
-}
-.cd-nav-trigger.menu-is-open span::before {
+  height: 8em;
   top: 0;
-  -webkit-transform: rotate(135deg);
-  -moz-transform: rotate(135deg);
-  -ms-transform: rotate(135deg);
-  -o-transform: rotate(135deg);
-  transform: rotate(135deg);
-}
-.cd-nav-trigger.menu-is-open span::after {
-  bottom: 0;
-  -webkit-transform: rotate(225deg);
-  -moz-transform: rotate(225deg);
-  -ms-transform: rotate(225deg);
-  -o-transform: rotate(225deg);
-  transform: rotate(225deg);
-}
-@media only screen and (min-width: 1170px) {
-  .cd-nav-trigger {
-    /* the the menu triger is hidden by default on desktop devices */
-    visibility: hidden;
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
-    transform: scale(0);
-    -webkit-transition: -webkit-transform 0.3s, visibility 0s 0.3s;
-    -moz-transition: -moz-transform 0.3s, visibility 0s 0.3s;
-    transition: transform 0.3s, visibility 0s 0.3s;
-  }
-  .is-fixed .cd-nav-trigger {
-    visibility: visible;
-    -webkit-transition: all 0s;
-    -moz-transition: all 0s;
-    transition: all 0s;
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
-    -webkit-animation: cd-bounce-in 0.3s linear;
-    -moz-animation: cd-bounce-in 0.3s linear;
-    animation: cd-bounce-in 0.3s linear;
-  }
+  z-index: 999;
+  padding:2em 6em;
+  transition: all 200ms linear;
 }
 
-
-
-@-webkit-keyframes cd-slide-in {
-  0% {
-    -webkit-transform: translateX(100px);
-  }
-
-  100% {
-    -webkit-transform: translateY(0);
-  }
-}
-@-moz-keyframes cd-slide-in {
-  0% {
-    -moz-transform: translateX(100px);
-  }
-
-  100% {
-    -moz-transform: translateY(0);
-  }
-}
-@keyframes cd-slide-in {
-  0% {
-    -webkit-transform: translateX(100px);
-    -moz-transform: translateX(100px);
-    -ms-transform: translateX(100px);
-    -o-transform: translateX(100px);
-    transform: translateX(100px);
-  }
-
-  100% {
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-@-webkit-keyframes cd-bounce-in {
-  0% {
-    -webkit-transform: scale(0);
-  }
-
-  60% {
-    -webkit-transform: scale(1.2);
-  }
-
-  100% {
-    -webkit-transform: scale(1);
-  }
-}
-@-moz-keyframes cd-bounce-in {
-  0% {
-    -moz-transform: scale(0);
-  }
-
-  60% {
-    -moz-transform: scale(1.2);
-  }
-
-  100% {
-    -moz-transform: scale(1);
-  }
-}
-@keyframes cd-bounce-in {
-  0% {
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
-    transform: scale(0);
-  }
-
-  60% {
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-
-  100% {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
-  }
+.nav li{
+  display: inline-block;
+  float: right;
+  padding-top: 0.5em;
 }
 
-
-.welcome {
-	background: transparent url("../img/iceland.jpg") no-repeat center top;
-	background-size: cover; 
-	text-align: center;
+.nav li a{
+  display: inline-block;
+  min-width: 120px;
+  font-size: 16px;
+  line-height: 50px;
+  color: #35404F;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
+.nav li a:hover {
+  color:#F2D8A7;
 
-.welcome p {
-	color: #fff;
+  transition: all 350ms linear;
 }
 
-.name {
-	font-size: 6em;
-	margin-top: 0.75em;
-	line-height: 1em;
+.logo{
+  float: left;
+  position: fixed;
+  width: 300px;
+  height: 70px;
 }
 
-.desc {
-	font-size: 1.7em;
-	line-height: 1.5em;
+.hello {
+  background-color: #65BEB4;
+  padding:9.5em 6em;
+  margin-top: 9em;
+  text-align: center;
 }
 
-.arrow {
-	position: relative;
-	width:60px;
-	margin-top: 14em;
-	top:1em;
+.hello h1 {
+  color: #fff;
+  font-size: 3.25em;
+  line-height: 1.35em;
+  margin-bottom: 1em;
+  animation: fadein 3s;
+  -moz-animation: fadein 3s; /* Firefox */
+  -webkit-animation: fadein 3s; /* Safari and Chrome */
+  -o-animation: fadein 3s; /* Opera */
 }
 
-.bounce {
- -webkit-animation-name: bounce;
- -moz-animation-name: bounce;
- -webkit-animation-duration: 0.5s;
- -moz-animation-duration: 0.5s;
- -webkit-animation-iteration-count: infinite;
- -moz-animation-iteration-count: infinite;
- -webkit-animation-direction: alternate;
- -moz-animation-direction: alternate;
- -webkit-animation-timing-function: eaze-in-out;
- -moz-animation-timing-function: eaze-in-out;
- }
- 
- 
- @-webkit-keyframes bounce {
-  from { top: 1em; }
-  to { top: 2em; }
- }
-
-@-moz-keyframes bounce {
-  from { top: 1em; }
-  to { top: 2em; }
+.hello p {
+  color: #fff;
+  font-size: 1.87em;
+  font-weight: 400;
+  line-height: 1.45em;
+  animation: fadein 3s;
+  -moz-animation: fadein 3s; /* Firefox */
+  -webkit-animation: fadein 3s; /* Safari and Chrome */
+  -o-animation: fadein 3s; /* Opera */
 }
 
-.about {
-	background: transparent url("../img/snow2.jpg") no-repeat center top;
-	background-size: cover; 
-	padding:5em 10em;
-	overflow: hidden;
-	color: #000;
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-.about h2 {
+.ilove {
+  padding:4em 6em 6em;
+  text-align: center;
+  background-color: #f2f2f2;
+}
 
-	text-transform: uppercase;
+.ilove h2 {
+  font-size: 2em;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #35404F;
+  margin: 1em 2em 2.5em;
 
 }
 
-
-.about p {
-	position: relative;
-	line-height: 2em;
-	font-size: 1.1em;
-	font-weight: 400;
-	margin-top: 1em;
+.ilove h3 {
+  margin:4em 0;
 }
 
-.ido {
-
-	background-color: #211B05;
-	text-align: center;
-	padding:3em;
-
+.ilove img {
+  width:150px;
+  height:150px;
 }
 
-.ido h2 {
-	text-transform: uppercase;
-	color: #fff;
-	font-weight: normal;
+.icons {
+  opacity: 0;
 }
 
-.ch-grid {
-    margin: 20px 0 0 0;
-    padding: 0;
-    list-style: none;
-    display: block;
-    text-align: center;
-    width: 100%;
-}
- 
-.ch-grid:after,
-.ch-item:before {
-    content: '';
-    display: table;
-}
- 
-.ch-grid:after {
-    clear: both;
-}
- 
-.ch-grid li {
-    width: 220px;
-    height: 220px;
-    display: inline-block;
-    margin: 20px;
+
+.loveicons {
+  -webkit-animation: icon-fade 1s linear forwards;
+
 }
 
-.ch-item {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    position: relative;
-    cursor: default;
-    perspective: 900px;
-}
+  @-webkit-keyframes icon-fade {
+    0% {
+      opacity:0;
+      transform: translateY(100px);
+    }
 
-.ch-info{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-}
+    100% {
+      opacity:1;
+    }
 
-.ch-info > div {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-position: center center;
-    transition: all 0.4s linear;
-    transform-origin: 50% 0%;
-}
-
-.ch-info .ch-info-front {
-    box-shadow: inset 0 0 0 16px rgba(0,0,0,0.3);
-}
-
-.ch-info .ch-info-back {
-    transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
-    background: #fff;
-    opacity: 0;
-}
-
-.ch-info h3 {
-    color: #000;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 24px;
-    margin: 0 15px;
-    padding: 60px 0 0 0;
-    height: 110px;
-    font-family: 'Open Sans', Arial, sans-serif;
-    text-shadow: 
-        0 0 1px #fff, 
-        0 1px 2px rgba(255,255,255,0.3);
-}
- 
-.ch-info p {
-    color: #000;
-    padding: 10px 5px;
-    font-style: italic;
-    margin: 0 30px;
-    font-size: 12px;
-    border-top: 1px solid rgba(0,0,0,0.5);
-}
- 
-.ch-info p a {
-    display: block;
-    color: rgba(255,255,255,0.7);
-    font-style: normal;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 9px;
-    letter-spacing: 1px;
-    padding-top: 4px;
-    font-family: 'Open Sans', Arial, sans-serif;
-}
- 
-.ch-info p a:hover {
-    color: rgba(255,242,34, 0.8);
-}
-
-.ch-item:hover .ch-info-front {
-    transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
-    opacity: 0;
-}
-
-.ch-item:hover .ch-info-back {
-    transform: rotate3d(1,0,0,0deg);
-    opacity: 1;
-}
-
-.ch-img-1 { 
-    background-image: url("http://placehold.it/200x200");
-}
- 
-.ch-img-2 { 
-    background-image: url("http://placehold.it/200x200");
-}
- 
-.ch-img-3 { 
-    background-image: url("http://placehold.it/200x200");
 }
 
 .work {
-
-	text-align: center;
-	overflow: hidden;
-	padding:0;
-	background: transparent url("../img/dust.png") repeat center top;
-	padding-bottom: 3em;
-}
-
-.work hr {
-  clear: both; 
-  float: none; 
-  width: 100%; 
-  height: 1px;
-  margin: 3em 0;
-  border: none; 
-  background: #ddd;
-  background-image: -webkit-gradient(
-      linear,
-      left bottom,
-      right bottom,
-      color-stop(0, rgb(255,255,255)),
-      color-stop(0.1, rgb(221,221,221)),
-      color-stop(0.9, rgb(221,221,221)),
-      color-stop(1, rgb(255,255,255))
-  );
-  background-image: -moz-linear-gradient(
-      left center,
-      rgb(255,255,255) 0%,
-      rgb(221,221,221) 10%,
-      rgb(221,221,221) 90%,
-      rgb(255,255,255) 100%
-  );
+  padding:3em;
+  text-align: center;
 }
 
 .work h2 {
-	text-transform: uppercase;
-	font-weight: normal;
-	margin:3em 0 1em;
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #35404F;
+  margin: 2em 2em 3em;
 }
 
-.work h4 {
+/* hover effects */
 
-	text-transform: uppercase;
-	margin-bottom: 3em;
-	font-size: 1.5em;
-	display: inline;
-	border: 1px solid #000;
-	padding:1em;
-}
 
-/* work grid */
+.item {
+      text-align:center;
+      margin:5px;
+      position:relative;      
+    }
+    
+      .item,
+      .item-hover,
+      .item-hover .mask,
+      .item-img,
+      .item-info {
+        width: 400px;
+        height: 400px;  
+      }
 
-.container {
-	width: 100%;
-}
+      .item-hover,
+      .item-hover .mask,
+      .item-img { 
+        position:absolute;
+        top:0;
+        left:0;     
+      }     
+    
+      .item-type-line .item-hover { 
+        z-index:100;  
+        -webkit-transition: all 300ms ease-out;
+        -moz-transition: all 300ms ease-out;
+        -o-transition: all 300ms ease-out;
+        transition: all 300ms ease-out; 
+        opacity:0;
+        cursor:pointer;           
+        display:block;
+        text-decoration:none;
+        text-align:center;
+      }
+      
+        .item-type-line .item-info {
+          z-index:10;
+          color:#3B3A35;
+          display:table-cell;
+          vertical-align:middle;
+          position:relative;
+          z-index:5;                  
+        }
+      
+        .item-type-line .item-info .headline {
+          font-size:1.5em;         
+        }
+        
+        .item-type-line .item-info .line {
+           height:1px;
+           width:0%;
+           margin:15px auto;
+           background-color:#3B3A35;
+          -webkit-transition: all 300ms ease-out;
+          -moz-transition: all 300ms ease-out;
+          -o-transition: all 300ms ease-out;
+          transition: all 300ms ease-out;          
 
-.container > header {
-	width: 90%;
-	max-width: 1240px;
-	margin: 0 auto;
-	position: relative;
-	padding: 0 30px 50px 30px;
-}
+        }
+        
+        .item-type-line .item-info .desc {
+          font-size:1em;
+        }
+        
+        .item-type-line .item-hover .mask {
+          background-color:#F2D8A7;
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+          filter: alpha(opacity=85);                    
+          opacity:0.85;
+          z-index:0;
+        }
+        
+        .item-type-line .item-hover:hover .line {
+          width:70%;
+        }
+        
+        .item-type-line .item-hover:hover {
+          opacity:1;
+        }       
+      
+      .item-img {     
+        background-color:#3B3A35;
+        z-index:0;      
+      }
 
-.container > header {
-	padding: 60px 30px 50px;
-	text-align: center;
-}
-
-.container > header h1 {
-	font-size: 34px;
-	line-height: 38px;
-	margin: 0 auto;
-	font-weight: 700;
-	color: #333;
-}
-
-.container > header h1 span {
-	display: block;
-	font-size: 20px;
-	font-weight: 300;
-}
-
-.main > p {
-	text-align: center;
-	padding: 50px 20px;
-}
-
-/** hover effects **/
-
-.og-grid figure {
-
-	height: 300px;
-	width: 300px;
-	overflow: hidden;
-	position: relative;
-}
- 
-.og-grid figcaption {
-	background: rgba(0,0,0,0.8);
-	color: white;
-	display: table;
-	height: 100%;
-	left: 0;
-	opacity: 0;
-	position: absolute;
-	right: 0;
-	top: 0;
-	-webkit-transition: all 300ms;
-	-moz-transition: all 300ms;
-	transition: all 300ms;
-	-webkit-transition-delay: 100ms;
-	-moz-transition-delay: 100ms;
-	transition-delay: 100ms;
-	z-index: 1;
-}
- 
-.og-grid figcaption p {
-	display: table-cell;
-	font-size: 1.5em;
-	position: relative;
-	top: -40px;
-	width: 300px;
-	-webkit-transition: all 300ms ease-out;
-	-moz-transition: all 300ms ease-out;
-	transition: all 300ms ease-out;
-	vertical-align: middle;
-}
-
-.og-grid li:hover figcaption {
-	opacity: 1;
-}
-
-.og-grid li:hover figcaption p {
-	-moz-transform: translateY(40px);
-	-webkit-transform: translateY(40px);
-	transform: translateY(40px);
-}
-
+/* end hover */
 
 .contact {
-	background: transparent url("../img/headerbg.jpg") no-repeat center top;
-	background-size: cover;
-	text-align: center;
+  text-align: center;
+  background-color: #F3F5F8;
+  padding:3em;
+  margin-top: 2em;
 }
 
 .contact h2 {
-	color: #fff;
-	text-transform: uppercase;
-	font-weight: normal;
-	display: inline;
-	border: 1px solid #fff;
-	padding:0.5em;
-
+  font-family: 'Bree Serif', serif;
+  font-weight: 600;
+  font-size: 2.5em;
 }
 
-@media only screen and (min-width: 240px) {
+.contact a {
 
-  header {
-    display: none;
-  }
-
-  .welcome {
-    padding:2em;
-  }
-
-  .name {
-    font-size: 3em;
-  }
-
-  .about {
-    padding:2em 1em;
-  }
-
-  .unit-xs-1-2 {
-    width:100%;
-  }
-
-  .work h4 {
-    line-height: 4em;
-  }
-
-  .ido {
-    padding:2em;
-  }
-
-  .ch-img-1 {
-    width:20%;
-  }
-  }
-
-  @media only screen and (min-width: 35em) {
-  
-  .welcome {
-    padding:7em;
-  }
-
-  .about {
-    padding:2em 2em;
-  }
-
-  .unit-xs-1-2 {
-    width:100%;
-  }
-
-  .work h4 {
-    line-height: 4em;
-  }
-
-   .name {
-    font-size: 4em;
-  }
-
-  }
-
-  @media only screen and (min-width: 40em) {
-  .about {
-    padding:2em 2em;
-    background-position:right top;
-  }
-
-  .unit-xs-1-2 {
-    width:66.666%;
-  }
-
-  .work h4 {
-    line-height: 4em;
-  }
-
-  .name {
-    font-size: 6em;
-  }
-
-  }
-
-  @media only screen and (min-width: 1024px) {
-
-      header {
-    display: block;
-  }
-
-  .about {
-    padding:4em;
-    background-position:right top;
-  }
-
-  .unit-xs-1-2 {
-    width:60%;
-  }
-
-  .work h4 {
-    line-height: 4em;
-  }
-  }
-
-  @media only screen and (min-width: 1200px) {
-  .about {
-    padding:6em 0 6em 10em;
-    background-position:right top;
-  }
-
-  .unit-xs-1-2 {
-    width:50%;
-  }
-
-  .work h4 {
-    line-height: 4em;
-  }
-  }
-
+}

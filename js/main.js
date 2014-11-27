@@ -1,64 +1,61 @@
-jQuery(document).ready(function($){
-	// browser window scroll (in pixels) after which the "menu" link is shown
-	var offset = 300;
+var $iLove = $('.ilove');
+var $icons = $('.icons');
 
-	var navigationContainer = $('#cd-nav'),
-		mainNavigation = navigationContainer.find('#cd-main-nav ul');
+$iLove.waypoint(function () {
+	$icons.addClass('loveicons');
+}, {offset:'50%'});
 
-	//hide or show the "menu" link
-	checkMenu();
-	$(window).scroll(function(){
-		checkMenu();
+	$(window).scroll(function() {    
+	    var scroll = $(window).scrollTop();
+
+	    if (scroll >= 30) {
+	        $(".nav").addClass("scrolling");
+	    } else {
+	        $(".nav").removeClass("scrolling");
+	    }
 	});
 
-	//open or close the menu clicking on the bottom "menu" link
-	$('.cd-nav-trigger').on('click', function(){
-		$(this).toggleClass('menu-is-open');
-		//we need to remove the transitionEnd event handler (we add it when scolling up with the menu open)
-		mainNavigation.off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend').toggleClass('is-visible');
+	// Smooth scroll for in page links
+$(function(){
+    var target, scroll;
 
-	});
+    $("a[href*=#]:not([href=#])").on("click", function(e) {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            target = $(this.hash);
+            target = target.length ? target : $("[id=" + this.hash.slice(1) + "]");
 
-	function checkMenu() {
-		if( $(window).scrollTop() > offset && !navigationContainer.hasClass('is-fixed')) {
-			navigationContainer.addClass('is-fixed').find('.cd-nav-trigger').one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(){
-				mainNavigation.addClass('has-transitions');
-			});
-		} else if ($(window).scrollTop() <= offset) {
-			//check if the menu is open when scrolling up
-			if( mainNavigation.hasClass('is-visible')  && !$('html').hasClass('no-csstransitions') ) {
-				//close the menu with animation
-				mainNavigation.addClass('is-hidden').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-					//wait for the menu to be closed and do the rest
-					mainNavigation.removeClass('is-visible is-hidden has-transitions');
-					navigationContainer.removeClass('is-fixed');
-					$('.cd-nav-trigger').removeClass('menu-is-open');
-				});
-			//check if the menu is open when scrolling up - fallback if transitions are not supported
-			} else if( mainNavigation.hasClass('is-visible')  && $('html').hasClass('no-csstransitions') ) {
-					mainNavigation.removeClass('is-visible has-transitions');
-					navigationContainer.removeClass('is-fixed');
-					$('.cd-nav-trigger').removeClass('menu-is-open');
-			//scrolling up with menu closed
-			} else {
-				navigationContainer.removeClass('is-fixed');
-				mainNavigation.removeClass('has-transitions');
-			}
-		} 
-	}
+            if (target.length) {
+                if (typeof document.body.style.transitionProperty === 'string') {
+                    e.preventDefault();
+                  
+                    var avail = $(document).height() - $(window).height();
+
+                    scroll = target.offset().top;
+                  
+                    if (scroll > avail) {
+                        scroll = avail;
+                    }
+
+                    $("html").css({
+                        "margin-top" : ( $(window).scrollTop() - scroll ) + "px",
+                        "transition" : "1s ease-in-out"
+                    }).data("transitioning", true);
+                } else {
+                    $("html, body").animate({
+                        scrollTop: scroll
+                    }, 1000);
+                    return;
+                }
+            }
+        }
+    });
+
+    $("html").on("transitionend webkitTransitionEnd msTransitionEnd oTransitionEnd", function (e) {
+        if (e.target == e.currentTarget && $(this).data("transitioning") === true) {
+            $(this).removeAttr("style").data("transitioning", false);
+            $("html, body").scrollTop(scroll);
+            return;
+        }
+    });
 });
 
-$(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
-});
