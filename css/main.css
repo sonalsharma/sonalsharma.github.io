@@ -1,6 +1,6 @@
 body {
 	margin: 0;
-	background-color: #fff;
+	background-color: #f8f8f8;
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -641,7 +641,7 @@ ul {
 }
 
 .main {
-  margin-top: 10em;
+  margin: 10em 0 2em;
   padding:0 2em;
 }
 .main img{
@@ -649,6 +649,7 @@ ul {
 }
 
 .projdesc {
+  background-color: #3f4c5e;
   padding:4em;
   overflow: hidden;
 }
@@ -656,16 +657,20 @@ ul {
 .projdesc h2 {
   float: left;
   font-size: 2.5em;
+  font-weight: 600;
   width:50%;
+  color: #fff;
 }
 
 .projdesc p {
   float: right;
-  font-size: 1em;
-  line-height: 1.75em;
+  font-size: 1.15em;
+  font-weight: 300;
+  line-height: 1.8em;
   width: 50%;
   clear: right;
   margin-bottom: 1em;
+  color:#fff;
 }
 
 .subs {
