@@ -1,6 +1,6 @@
 body {
 	margin: 0;
-	background-color: #f8f8f8;
+	background-color: #f7f7f7;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -505,7 +505,6 @@ ul {
 .work {
   padding:3em;
   text-align: center;
-  background-color: #f3f5f8;
 }
 
 .work h2 {
@@ -615,6 +614,8 @@ ul {
 .contact {
   text-align: center;
   background-color: #35404F;
+  background: transparent url("../img/contactbg.jpg") no-repeat fixed center;
+  background-size: cover;
   padding:4em 10em 1em;
   margin-top: 4em;
 }
