@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 	background-color: #f8f8f8;
-	font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 ul {
@@ -215,9 +215,9 @@ ul {
 /* END GRID */
 
 .nav.scrolling {
-  background-color: #697076;
+  background-color: #000;
   transition: all 200ms linear;
-  opacity: 0.9;
+  opacity: 0.8;
   height:70px;
   padding: 0 6em;
 }
@@ -265,7 +265,7 @@ ul {
   display: inline-block;
   /*min-width: 120px;*/
   margin-right: 4em;
-  font-size: 16px;
+  font-size: 1em;
   line-height: 50px;
   color: #35404F;
   text-transform: uppercase;
@@ -288,7 +288,7 @@ ul {
   position: fixed;
   width: 250px;
   margin-left: 4.5em;
-  margin-top: 1em;
+  margin-top: 1.5em;
 }
 
 .logo-s {
@@ -304,7 +304,7 @@ ul {
 .hello h2 {
   color: #fff;
   font-family: 'Roboto Slab', serif;
-  font-size: 2.75em;
+  font-size: 2.5em;
   line-height: 1.5em;
   animation: fadein 3s;
   -moz-animation: fadein 3s; /* Firefox */
@@ -347,7 +347,7 @@ ul {
 }
 
 .ilove {
-  padding:4em 6em 6em;
+  padding:3em 6em 4em;
   text-align: center;
   background-color: #f3f5f8;
 }
@@ -375,7 +375,8 @@ ul {
 
 .icons p {
   padding:2em 0;
-  font-weight: 600;
+  font-size: 1.25em;
+  font-weight: 300;
   color:#35404F;
 }
 
@@ -474,9 +475,37 @@ ul {
   }
 }
 
+.learnmore {
+  text-align: center;
+  background: transparent url("../img/love-bg2.jpg") no-repeat fixed center;
+  background-size: cover;
+  padding: 10em;
+}
+
+.learnmore a {
+
+  font-size: 1.75em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color:#f8f8f8;
+  border: 1px solid;
+  display: inline;
+  padding:1em;
+  opacity: 0.8;
+}
+
+.learnmore a:hover {
+
+  color:#65BEB4;
+
+  transition: all 350ms linear;
+
+}
+
 .work {
   padding:3em;
   text-align: center;
+  background-color: #f3f5f8;
 }
 
 .work h2 {
@@ -484,7 +513,7 @@ ul {
   font-weight: bold;
   text-transform: uppercase;
   color: #35404F;
-  margin: 2em 2em 3em;
+  margin: 1em 2em 1.5em;
 }
 
 /* hover effects */
@@ -683,6 +712,17 @@ ul {
 }
 
 @media only screen and (max-width: 299px){ 
+
+  .learnmore {
+    padding:5em 1em;
+  }
+
+  .learnmore a {
+
+    font-size: 1em;
+    border:none;
+
+  }
 
   .main {
     margin-top: 15em;
@@ -922,6 +962,17 @@ ul {
 }
 
 @media (min-width: 300px) and (max-width: 600px){
+
+  .learnmore {
+    padding:7em 1em;
+  }
+
+  .learnmore a {
+
+    font-size: 1.25em;
+    border:none;
+
+  }
 
  .main {
     margin-top: 15em;
@@ -1186,6 +1237,16 @@ ul {
 
 @media (min-width: 601px) and (max-width: 800px){
 
+  .learnmore {
+    padding:8em 3em;
+  }
+
+  .learnmore a {
+
+    font-size: 1.5em;
+
+  }
+
 .projdesc {
   padding:2em;
   overflow: hidden;
@@ -1261,6 +1322,16 @@ ul {
   }
 
 @media (min-width: 801px) and (max-width: 950px){
+
+  .learnmore {
+    padding:10em 4em;
+  }
+
+  .learnmore a {
+
+    font-size: 1.5em;
+
+  }
 
   .nav {
     padding:1em 0 0;

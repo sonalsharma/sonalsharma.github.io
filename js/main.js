@@ -1,3 +1,4 @@
+var $win = $(window);
 var $iLove = $('.ilove');
 var $icons = $('.icons img,p');
 var iLoveOffset = $iLove.offset();
@@ -15,6 +16,14 @@ var iLoveOffset = $iLove.offset();
     $iLove.waypoint(function() {
     $icons.addClass('icons-animate');
 }, { offset: '55%' });
+
+
+    $win.on('scroll', function () {
+    var scrollPos = $win.scrollTop();
+
+    $iLove.css('background-position', 'center' + scrollPos / 2 + 'px')
+
+});
 
 
 	// Smooth scroll for in page links

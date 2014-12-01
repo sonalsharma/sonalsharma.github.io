@@ -3,12 +3,16 @@
 <head>
 	<meta charset="utf-8">
 	<title>Sonal Sharma · Designer · Ottawa, Canada</title>
-	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Crimson+Text:700italic,600italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:500,700,400' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300' rel='stylesheet' type='text/css'>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
 	<link href="css/reset.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
 
 	<script src="js/modernizr.custom.js"></script>
+
+	<link rel="shortcut icon" href="http://www.sonalsharma.ca/favicon.ico" />
+
 
 	<meta name="handheldfriendly" content="true">
 	<meta name="mobileoptimized" content="240">
@@ -44,23 +48,57 @@
 <body>
 
 
-	<div class="header">
-	<div class="logo">
-		<h1>Sonal Sharma</h1>
-		<p>designer, developer, cat lover</p>
+	<div class="nav">
+		<h1>
+			<a href="index.html"><img class="logo" src="img/logo-w.svg" alt="Sonal Sharma, Designer, Developer"></a>
+			<a href="index.html"><img class="logo-s" src="img/logo-s.svg" alt="Sonal Sharma, Designer, Developer"></a>
+		</h1>
+		<ul>
+			<li><a href="about.html">about</a></li>
+			<li><a href="#work">work</a></li>
+			<li><a href="#contact">contact</a></li>
+		</ul>
+
 	</div>
-		<nav class="nav">
-			<ul>
-				<li><a href="about.html">About</a></li>
-				<li><a href="index.html">Work</a></li>
-			</ul>
-		</nav>
-</div>
 
-	<section class="about">
+	<section class="aboutme">
 
+		<h2>Who's the somber looking girl?</h2>
+
+		<p>Oh, thats me. My name's Sonal and by some boring definition i'm a designer. But you know what sounds better? I'm a cat princess
+
+	</section>
+
+	<section id="contact" class="contact">
+
+		<h2>Get in touch</h2>
+
+		<ul class="social">
+				<li>
+					<a target="_self" href="http://www.behance.com/sonalsharma">
+					<i class="fa fa-behance"></i>
+					</a>
+				</li>	
+				<li>
+					<a target="_self" href="http://www.twitter.com/sharmasonalx">
+					<i class="fa fa-twitter"></i>
+					</a>
+				</li>
+				<li>
+					<a target="_self" href="https://www.linkedin.com/in/sonalsharmaa">
+					<i class="fa fa-linkedin"></i>
+					</a>
+				</li>			
+			</ul>	
+
+			<p>I'm currently available for work!</p>
+			<a href="mailto:info@sonalsharma.ca?Subject=Hello" target="_top">info@sonalsharma.ca</a>
 		
-		<h2> ABOUT ME YO </h2>
+
+			<div class="footer">
+			<p>© 2014 Sonal Sharma</p>
+		</div>
+
 
 	</section>
 
@@ -69,12 +107,7 @@
 <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="js/waypoints.min.js"></script>
 <script src="js/main.js"></script>
-<script src="js/grid.js"></script>
 
-<script>
-			$(function() {
-				Grid.init();
-			});
-		</script>
+
 </body>
 </html>
