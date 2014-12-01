@@ -216,7 +216,7 @@ ul {
 
 .nav.scrolling {
   background-color: #697076;
-  transition: all 350ms linear;
+  transition: all 200ms linear;
   opacity: 0.9;
   height:70px;
   padding: 0 6em;
@@ -224,12 +224,12 @@ ul {
 
 .nav.scrolling li {
   padding:0.6em 0;
-  transition: all 350ms linear;
+  transition: all 200ms linear;
 }
 
 .nav.scrolling li a {
   color:#fff;
-  transition: all 350ms linear;
+  transition: all 200ms linear;
 }
 
 .nav.scrolling img {
@@ -237,7 +237,7 @@ ul {
   padding-top: 5px;
   margin-top: 0;
   opacity: 0.75;
-  transition: all 350ms linear;
+  transition: all 100ms linear;
 }
 
 .nav{
@@ -247,7 +247,7 @@ ul {
   top: 0;
   z-index: 999;
   padding:0 6em;
-  transition: all 200ms linear;
+  transition: all 100ms linear;
 }
 
 .nav ul {
@@ -392,24 +392,76 @@ ul {
 
 .icons-animate {
   -webkit-animation: icons-fadein 1s ease-out forwards;
+  -moz-animation: icons-fadein 1s ease-out forwards; /* Firefox */
+  -webkit-animation: icons-fadein 1s ease-out forwards; /* Safari and Chrome */
+  -o-animation: icons-fadein 1s ease-out forwards; /* Opera */
 }
 
 .icons li:first-child img {
   -webkit-animation-delay: 100ms;
+  -moz-animation-delay: 100ms; /* Firefox */
+  -webkit-animation-delay: 100ms; /* Safari and Chrome */
+  -o-animation-delay: 100ms; /* Opera */
 }
 
 .icons li:nth-child(2) img {
   -webkit-animation-delay: 200ms;
+   -moz-animation-delay: 200ms; /* Firefox */
+  -webkit-animation-delay: 200ms; /* Safari and Chrome */
+  -o-animation-delay: 200ms; /* Opera */
 }
 
 .icons li:last-child img {
   -webkit-animation-delay: 250ms;
+   -moz-animation-delay: 250ms; /* Firefox */
+  -webkit-animation-delay: 250ms; /* Safari and Chrome */
+  -o-animation-delay: 250ms; /* Opera */
 }
 
 
 
 @-webkit-keyframes icons-fadein {
   0% {
+    opacity: 0;
+    transform: translateY(140px);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-moz-keyframes icons-fadein { /* Firefox */
+   0% {
+    opacity: 0;
+    transform: translateY(140px);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes icons-fadein { /* Safari and Chrome */
+   0% {
+    opacity: 0;
+    transform: translateY(140px);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-o-keyframes icons-fadein { /* Opera */
+   0% {
     opacity: 0;
     transform: translateY(140px);
   }
