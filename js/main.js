@@ -1,19 +1,21 @@
 var $iLove = $('.ilove');
-var $icons = $('.icons');
-
-$iLove.waypoint(function () {
-	$icons.addClass('loveicons');
-}, {offset:'50%'});
+var $icons = $('.icons img,p');
+var iLoveOffset = $iLove.offset();
 
 	$(window).scroll(function() {    
 	    var scroll = $(window).scrollTop();
 
 	    if (scroll >= 30) {
-	        $(".nav").addClass("scrolling");
+	        $(".nav").addClass("scrolling logo-w");
 	    } else {
-	        $(".nav").removeClass("scrolling");
+	        $(".nav").removeClass("scrolling logo-w");
 	    }
 	});
+
+    $iLove.waypoint(function() {
+    $icons.addClass('icons-animate');
+}, { offset: '55%' });
+
 
 	// Smooth scroll for in page links
 $(function(){
@@ -59,3 +61,25 @@ $(function(){
     });
 });
 
+
+$(function() {
+    var pull        = $('#pull');
+        menu        = $('nav ul');
+        menuHeight  = menu.height();
+
+    $(pull).on('click', function(e) {
+        e.preventDefault();
+        menu.slideToggle();
+    });
+});
+
+$(function() {
+    var pull        = $('#pull');
+        menu        = $('nav ul');
+        menuHeight  = menu.height();
+
+    $(pull).on('click', function(e) {
+        e.preventDefault();
+        menu.slideToggle();
+    });
+});

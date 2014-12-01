@@ -4,10 +4,14 @@
 	<meta charset="utf-8">
 	<title>Sonal Sharma · Designer · Ottawa, Canada</title>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,400' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300' rel='stylesheet' type='text/css'>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
 	<link href="css/reset.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
 
 	<script src="js/modernizr.custom.js"></script>
+
+	<link rel="shortcut icon" href="http://www.sonalsharma.ca/favicon.ico" />
 
 
 	<meta name="handheldfriendly" content="true">
@@ -39,7 +43,7 @@
 	<meta name="twitter:image2" content="">
 	<meta name="twitter:image3" content="">
 
-	<meta http-equiv="refresh" content="0; url=http://sonalsharma.ca/404.html" />
+	<!--<meta http-equiv="refresh" content="0; url=http://sonalsharma.ca/404.html" />-->
 
 
 </head>
@@ -47,40 +51,45 @@
 
 
 	<div class="nav">
-		<a href="index.html"><img class="logo" src="http://placehold.it/300x70" alt="logo"></a>
+		<h1>
+			<a href="index.html"><img class="logo" src="img/logo-w.svg" alt="Sonal Sharma, Designer, Developer"></a>
+			<a href="index.html"><img class="logo-s" src="img/logo-s.svg" alt="Sonal Sharma, Designer, Developer"></a>
+		</h1>
 		<ul>
-			<li><a href="#contact">contact</a></li>
-			<li><a href="#work">work</a></li>
 			<li><a href="#about">about</a></li>
+			<li><a href="#work">work</a></li>
+			<li><a href="#contact">contact</a></li>
 		</ul>
 
 	</div>
 
 	<section class="hello">
-		<h1>Sonal Sharma / Designer / Developer / Oddball</h1>
-		<p>I like creating things, playing with code, fluffy viking cats and 2d motion graphics.</p>
+		<h2>Hello! I'm Sonal. I like creating things, playing with code, fluffy viking cats and 2d motion graphics. Take a look at my stuff and tell me what you think!</h2>
 	</section>
 
 	<section class="ilove">
 
 		<h2>What I love to do</h2>
 
-		<div class="grid icons">
-			<div class="unit unit-xs-1-3">
-				<img src="img/close33.svg">
-				<h3>Digital Design</h3>
-			</div>
-
-			<div class="unit unit-xs-1-3">
-				<img src="img/close33.svg">
-				<h3>Web Development</h3>
-			</div>
-
-			<div class="unit unit-xs-1-3">
-				<img src="img/close33.svg">
-				<h3>Motion Graphics</h3>
-			</div>
-		</div>
+	<ul class="icons">
+		<li class="unit unit-xs-1-2 unit-s-1-4">
+			<img src="img/digitaldesign.svg" alt="">
+			<p>Digital Design</p>
+		</li>
+		<li class="unit unit-xs-1-2 unit-s-1-4">
+			<img src="img/responsive.svg" alt="">
+			<p>Responsive Web Development</p>
+		</li>
+		<li class="unit unit-xs-1-2 unit-s-1-4">
+			<img src="img/motion.svg" alt="">
+			<p>Motion Graphics</p>
+		</li>
+		<li class="unit unit-xs-1-2 unit-s-1-4">
+			<img src="img/branding.svg" alt="">
+			<p>Branding</p>
+		</li>
+	</ul>
+</section>
 
 	</section>
 
@@ -90,18 +99,18 @@
 		<h2>work</h2>
 
 			<div class="item item-type-line unit unit-xs-1-4">
-				<a class="item-hover" href="" target="_blank">
+				<a class="item-hover" href="future-of-asia.html" target="_self">
 					<div class="item-info">
-						<div class="headline">Futue of Asia</div>
+						<div class="headline">Future of Asia</div>
 						<div class="line"></div>
 						<div class="desc">Print, Multimedia</div>
 					</div>
 					<div class="mask"></div>
 				</a>
-				<div class="item-img"><img src="" alt=""></div>
+				<div class="item-img"><img src="img/foa/foa-cover-s.jpg" alt="Future of Asia Supplementary Report"></div>
 			</div>
 			<div class="item item-type-line unit unit-xs-1-4">
-				<a class="item-hover" href="" target="_blank">
+				<a class="item-hover" href="sunita.html" target="_blank">
 					<div class="item-info">
 						<div class="headline">Sunita's Sewing &amp; Alterations</div>
 						<div class="line"></div>
@@ -109,10 +118,10 @@
 					</div>
 					<div class="mask"></div>
 				</a>
-				<div class="item-img"><img src="" alt=""></div>
+				<div class="item-img"><img src="img/sunita/sunita-main.jpg" alt="Sunita's Sewing and Alterations"></div>
 			</div>
 			<div class="item item-type-line unit unit-xs-1-4">
-				<a class="item-hover" href="" target="_blank">
+				<a class="item-hover" href="cana-geo.html" target="_blank">
 					<div class="item-info">
 						<div class="headline">Canal Geomatics</div>
 						<div class="line"></div>
@@ -120,7 +129,7 @@
 					</div>
 					<div class="mask"></div>
 				</a>
-				<div class="item-img"><img src="" alt=""></div>
+				<div class="item-img"><img src="img/canal/geo-main.jpg" alt=""></div>
 			</div>
 			<div class="item item-type-line unit unit-xs-1-4">
 				<a class="item-hover" href="" target="_blank">
@@ -185,9 +194,34 @@
 
 	<section id="contact" class="contact">
 
-			<h2> Contact me for stuff! </h2>
+		<h2>Get in touch</h2>
+
+		<ul class="social">
+				<li>
+					<a target="_blank" href="http://www.behance.com/sonalsharma">
+					<i class="fa fa-behance"></i>
+					</a>
+				</li>	
+				<li>
+					<a target="_blank" href="http://www.twitter.com/sharmasonalx">
+					<i class="fa fa-twitter"></i>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://www.linkedin.com/in/sonalsharmaa">
+					<i class="fa fa-linkedin"></i>
+					</a>
+				</li>			
+			</ul>	
+
+			<p>I'm currently available for work!</p>
 			<a href="mailto:info@sonalsharma.ca?Subject=Hello" target="_top">info@sonalsharma.ca</a>
+		
+
+			<div class="footer">
+			<p>© 2014 Sonal Sharma</p>
 		</div>
+
 
 	</section>
 
