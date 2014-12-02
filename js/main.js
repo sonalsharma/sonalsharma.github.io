@@ -21,7 +21,7 @@ var iLoveOffset = $iLove.offset();
     $win.on('scroll', function () {
     var scrollPos = $win.scrollTop();
 
-    $iLove.css('background-position', 'center' + scrollPos / 2 + 'px')
+    $iLove.css('background-position', 'center ' + scrollPos / 2 + 'px')
 
 });
 
