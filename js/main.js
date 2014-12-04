@@ -1,12 +1,12 @@
 var $win = $(window);
 var $iLove = $('.ilove');
-var $icons = $('.icons img,p');
+var $icons = $('.icons img');
 var iLoveOffset = $iLove.offset();
 
 	$(window).scroll(function() {    
 	    var scroll = $(window).scrollTop();
 
-	    if (scroll >= 30) {
+	    if (scroll >= 100) {
 	        $(".nav").addClass("scrolling logo-w");
 	    } else {
 	        $(".nav").removeClass("scrolling logo-w");
@@ -15,7 +15,7 @@ var iLoveOffset = $iLove.offset();
 
     $iLove.waypoint(function() {
     $icons.addClass('icons-animate');
-}, { offset: '55%' });
+}, { offset: '20%' });
 
 
     $win.on('scroll', function () {
@@ -26,7 +26,8 @@ var iLoveOffset = $iLove.offset();
 });
 
 
-	// Smooth scroll for in page links
+/*----Smooth scroll for in page links---*/
+
 $(function(){
     var target, scroll;
 
@@ -71,24 +72,9 @@ $(function(){
 });
 
 
-$(function() {
-    var pull        = $('#pull');
-        menu        = $('nav ul');
-        menuHeight  = menu.height();
-
-    $(pull).on('click', function(e) {
-        e.preventDefault();
-        menu.slideToggle();
-    });
-});
-
-$(function() {
-    var pull        = $('#pull');
-        menu        = $('nav ul');
-        menuHeight  = menu.height();
-
-    $(pull).on('click', function(e) {
-        e.preventDefault();
-        menu.slideToggle();
-    });
+jQuery(document).ready(function() {
+    jQuery('.post').addClass("hideme").viewportChecker({
+        classToAdd: 'visible animated fadeIn',
+        offset: 100
+       });
 });

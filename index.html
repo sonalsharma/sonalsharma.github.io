@@ -4,10 +4,11 @@
 	<meta charset="utf-8">
 	<title>Sonal Sharma · Designer · Ottawa, Canada</title>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400' rel='stylesheet' type='text/css'>
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
 	<link href="css/reset.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet"/>
 
 	<script src="js/modernizr.custom.js"></script>
 
@@ -50,11 +51,10 @@
 
 	<div class="nav">
 		<h1>
-			<a href="index.html"><img class="logo" src="img/logo-w.svg" alt="Sonal Sharma, Designer, Developer"></a>
-			<a href="index.html"><img class="logo-s" src="img/logo-s.svg" alt="Sonal Sharma, Designer, Developer"></a>
+			<a href="index.html"><img class="logo" src="img/logo2.svg" alt="Sonal Sharma, Designer, Developer"></a>
 		</h1>
 		<ul>
-			<li><a href="about.html">about</a></li>
+			<li><a href="#about">about</a></li>
 			<li><a href="#work">work</a></li>
 			<li><a href="#contact">contact</a></li>
 		</ul>
@@ -62,39 +62,41 @@
 	</div>
 
 	<section class="hello">
-		<h2>Hello! I'm Sonal. I like creating things, playing with code, fluffy viking cats and 2d motion graphics. This site is currently going through some changes so if something doesn't look right, its probably because the viking cat smashed something. But i'm working on it!</h2>
 	</section>
 
-	<section class="ilove">
 
-		<h2>What I love to do</h2>
+	<section id="about" class="ilove">
+
+
+			<h2 class="post">Hello, I'm Sonal</h2>
+
+
+			<p class="post">I'm a creator, a dreamer and someone who lives in between the realms of going with the flow and planning everything. I start with a plan and see where it takes me, and I think a lot of my designs reflect that. I've been interested in playing with code and creating websites since I was a young forum crawler. My post secondary edution let me harness that creativity and channel it into clean and aesthetically pleasing design solutions. I design for simplicity - I love readable type and non-clashing colors. But that doesn't mean i'm afraid to take risks. I love letterpress design, spending days coding a site to make it beautiful, motion graphics and fluffy viking cats. These days you can find me curled up in a blanket nest, playing hacked split screen games on a projector with a killer sound system and forgetting my tea on the side table.</p>
+
+
+			<h2 class="post">What I love to do</h2>
+
 
 	<ul class="icons">
 		<li class="unit unit-xs-1-2 unit-s-1-4">
 			<img src="img/digitaldesign.svg" alt="">
-			<p>Digital Design</p>
+			<p class="post">Digital Design</p>
 		</li>
 		<li class="unit unit-xs-1-2 unit-s-1-4">
 			<img src="img/responsive.svg" alt="">
-			<p>Responsive Web Development</p>
+			<p class="post">Responsive Web Development</p>
 		</li>
 		<li class="unit unit-xs-1-2 unit-s-1-4">
 			<img src="img/motion.svg" alt="">
-			<p>Motion Graphics</p>
+			<p class="post">Motion Graphics</p>
 		</li>
 		<li class="unit unit-xs-1-2 unit-s-1-4">
 			<img src="img/branding.svg" alt="">
-			<p>Branding</p>
+			<p class="post">Branding</p>
 		</li>
 	</ul>
-</section>
-
-<section class="learnmore">
-
-	<h2><a href="about.html">Learn more about me</a></h2>
-
-</section>
-
+	
+	</section>
 
 	<section id="work" class="work">
 
@@ -200,17 +202,17 @@
 
 		<ul class="social">
 				<li>
-					<a target="_self" href="http://www.behance.com/sonalsharma">
+					<a target="_blank" href="http://www.behance.com/sonalsharma">
 					<i class="fa fa-behance"></i>
 					</a>
 				</li>	
 				<li>
-					<a target="_self" href="http://www.twitter.com/sharmasonalx">
+					<a target="_blank" href="http://www.twitter.com/sharmasonalx">
 					<i class="fa fa-twitter"></i>
 					</a>
 				</li>
 				<li>
-					<a target="_self" href="https://www.linkedin.com/in/sonalsharmaa">
+					<a target="_blank" href="https://www.linkedin.com/in/sonalsharmaa">
 					<i class="fa fa-linkedin"></i>
 					</a>
 				</li>			
@@ -232,6 +234,7 @@
 <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="js/waypoints.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/viewportchecker.js"></script>
 
 
 </body>
