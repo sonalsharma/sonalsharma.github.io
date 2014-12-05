@@ -77,4 +77,24 @@ jQuery(document).ready(function() {
         classToAdd: 'visible animated fadeIn',
         offset: 100
        });
+
+    jQuery('.bounce1').addClass("hideme").viewportChecker({
+        classToAdd: 'visible animated bounceInUp',
+        offset: 100
+       });
+
+    jQuery('.bounce2').addClass("hideme").viewportChecker({
+        classToAdd: 'visible animated bounceInUp',
+        offset: 200
+       });
+
+    jQuery('.bounce3').addClass("hideme").viewportChecker({
+        classToAdd: 'visible animated bounceInUp',
+        offset: 300
+       });
+
+    jQuery('.bounce4').addClass("hideme").viewportChecker({
+        classToAdd: 'visible animated bounceInUp',
+        offset: 400
+       });
 });
