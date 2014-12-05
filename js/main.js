@@ -73,6 +73,7 @@ $(function(){
 
 
 jQuery(document).ready(function() {
+
     jQuery('.post').addClass("hideme").viewportChecker({
         classToAdd: 'visible animated fadeIn',
         offset: 100
@@ -96,5 +97,10 @@ jQuery(document).ready(function() {
     jQuery('.bounce4').addClass("hideme").viewportChecker({
         classToAdd: 'visible animated bounceInUp',
         offset: 400
+       });
+
+     jQuery('.mainlogo').addClass("hideme").viewportChecker({
+        classToAdd: 'logovis animated fadeInLeft',
+        offset: 100
        });
 });

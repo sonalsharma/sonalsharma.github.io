@@ -1138,7 +1138,7 @@ Copyright (c) 2014 Daniel Eden
   }
 
   100% {
-    opacity: 1;
+    opacity: 0.65;
     -webkit-transform: none;
             transform: none;
   }
@@ -1152,7 +1152,7 @@ Copyright (c) 2014 Daniel Eden
   }
 
   100% {
-    opacity: 1;
+    opacity: 0.65;
     -webkit-transform: none;
             transform: none;
   }
