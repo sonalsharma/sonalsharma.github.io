@@ -283,6 +283,55 @@ ul {
   font-weight: thin;
 }
 
+.nav-proj li a {
+
+   color: #000;
+
+}
+
+.nav-proj{
+  position: fixed;
+  width: 100%;
+  height: 5em;
+  top: 0;
+  z-index: 999;
+  padding:0 6em;
+  background-color: #f8f8f8; 
+}
+
+.nav-proj ul {
+  margin-right: 2.5em;
+  float:right;
+}
+
+.nav-proj li{
+  display: inline-block;
+  float: left;
+  padding-top: 1.5em;
+}
+
+.nav-proj li a{
+  display: inline-block;
+  margin-right: 4em;
+  font-size: 1em;
+  line-height: 50px;
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav-proj li a:hover {
+  color:#F2D8A7;
+
+  transition: all 350ms linear;
+}
+
+.nav-proj i {
+  font-size: 1.5em;
+  font-weight: thin;
+}
+
+
 .logo{
   float: left;
   position: fixed;
@@ -290,6 +339,16 @@ ul {
   margin-left: 4.5em;
   margin-top: 1.5em;
   display: none;
+}
+
+.logo2 {
+
+  float: left;
+  position: fixed;
+  width: 200px;
+  margin-left: 4.5em;
+  margin-top: 1em;
+
 }
 
 .hello {
@@ -528,36 +587,36 @@ ul {
 }
 
 .main {
-  margin: 10em 0 2em;
-  padding:0 2em;
+  margin: 5em 0 2em;
 }
-.main img{
-  width: 100%;
+
+.half {
+  width: 50%;
+  height: 50%;
 }
 
 .projdesc {
-  background-color: #3f4c5e;
   padding:4em;
   overflow: hidden;
 }
 
 .projdesc h2 {
-  float: left;
+
   font-size: 2.5em;
   font-weight: 600;
   width:50%;
-  color: #fff;
+  color: #3f4c5e;
+
 }
 
 .projdesc p {
-  float: right;
+
   font-size: 1.15em;
   font-weight: 300;
   line-height: 1.8em;
   width: 50%;
-  clear: right;
   margin-bottom: 1em;
-  color:#fff;
+  color:#3f4c5e;
 }
 
 .subs {
