@@ -7,10 +7,11 @@ var iLoveOffset = $iLove.offset();
 	    var scroll = $(window).scrollTop();
 
 	    if (scroll >= 100) {
-	        $(".nav").addClass("scrolling logo-w");
+	        $(".nav").addClass("scrolling");
 	    } else {
-	        $(".nav").removeClass("scrolling logo-w");
+	        $(".nav").removeClass("scrolling");
 	    }
+
 	});
 
     $iLove.waypoint(function() {
