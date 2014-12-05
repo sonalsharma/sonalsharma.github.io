@@ -303,7 +303,7 @@ ul {
   padding:1em 6em 4em;
   text-align: center;
   background-color: #ECDFBD;
-  background: url("../img/old_moon.png") repeat repeat;
+  background: url("../img/ticks.png") repeat repeat;
 }
 
 .ilove h2 {
@@ -325,8 +325,8 @@ ul {
 
 
 .ilove img {
-  width:150px;
-  height:150px;
+  width:175px;
+  height:175px;
 }
 
 .hideme {
@@ -355,6 +355,7 @@ ul {
   display: inline-block;
   margin: 0 4rem;
   min-width: 150px;
+  text-align: center;
 }
 
 
@@ -961,8 +962,6 @@ ul {
 
 .icons img {
   width: 130px;
-  opacity: 0;
-  transform: translateY(140px);
 }
 
 .work {
@@ -1209,6 +1208,10 @@ ul {
   .icons > li {
     margin: 0 1em;
   }
+
+  .icons p {
+    padding:0;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -1217,7 +1220,7 @@ ul {
   padding:0 12em 4em;
 }
 
-.icons p {
+.icons p{
   padding: 0;
 }
 
