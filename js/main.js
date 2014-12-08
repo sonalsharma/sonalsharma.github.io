@@ -87,17 +87,17 @@ jQuery(document).ready(function() {
 
     jQuery('.bounce2').addClass("hideme").viewportChecker({
         classToAdd: 'visible animated bounceInUp',
-        offset: 200
+        offset: 190
        });
 
     jQuery('.bounce3').addClass("hideme").viewportChecker({
         classToAdd: 'visible animated bounceInUp',
-        offset: 300
+        offset: 250
        });
 
     jQuery('.bounce4').addClass("hideme").viewportChecker({
         classToAdd: 'visible animated bounceInUp',
-        offset: 400
+        offset: 320
        });
 
      jQuery('.mainlogo').addClass("hideme").viewportChecker({
