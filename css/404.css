@@ -1,0 +1,73 @@
+body {
+	margin: 0;
+	background: transparent url("../img/ricepaper.png") repeat repeat;
+  	font-family: 'Roboto', sans-serif;
+  	text-align: center;
+}
+
+.main {
+	padding: 4em;
+}
+.main img {
+	width:35%;
+}
+
+.main h1 {
+	font-size: 2em;
+	margin: 1em;
+	line-height: 1.5em;
+	color: #35404F;
+}
+
+.main p {
+	font-size: 1.5em;
+	line-height: 1em;
+}
+
+.main a {
+	text-decoration: none;
+	color: #35404F;
+}
+
+.main a:hover {
+
+	color:#AF933E;
+
+  transition: all 250ms linear;
+}
+
+@media only screen and (max-width: 545px) {
+
+	.main {
+	padding: 1em;
+}
+.main img {
+	width:100%;
+}
+
+.main h1 {
+	font-size: 1.25em;
+}
+
+.main p {
+	font-size: 1em;
+}
+} 
+
+@media (min-width: 545px) and (max-width: 800px) {
+
+.main {
+	padding: 2em;
+}
+.main img {
+	width:80%;
+}
+
+.main h1 {
+	font-size: 1.25em;
+}
+
+.main p {
+	font-size: 1em;
+}
+} 
