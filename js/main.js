@@ -6,7 +6,7 @@ var iLoveOffset = $iLove.offset();
 	$(window).scroll(function() {    
 	    var scroll = $(window).scrollTop();
 
-	    if (scroll >= 100) {
+	    if (scroll >= 200) {
 	        $(".nav").addClass("scrolling");
 	    } else {
 	        $(".nav").removeClass("scrolling");

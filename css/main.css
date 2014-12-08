@@ -232,18 +232,18 @@ ul {
   transition: all 200ms linear;
 }
 
-.nav.scrolling img {
+.nav.scrolling .logo{
   display: block;
   height: 65px;
   margin-top: 0.15em;
   transition: all 200ms linear;
-  opacity: 0.75;
+  opacity: 0.65;
 }
 
 .nav{
   position: fixed;
   width: 100%;
-  height: 8em;
+  /*height: 8em;*/
   top: 0;
   z-index: 999;
   padding:0 6em;
@@ -258,7 +258,7 @@ ul {
 .nav li{
   display: inline-block;
   float: left;
-  padding-top: 2.5em;
+  padding-top: 1.5em;
 }
 
 .nav li a{
@@ -276,6 +276,31 @@ ul {
   color:#F2D8A7;
 
   transition: all 350ms linear;
+}
+
+.logo{
+  display: block;
+  float: left;
+  position: fixed;
+  width: 250px;
+  margin-left: 4.5em;
+  margin-top: 1.5em;
+  display: none;
+}
+
+
+.logow {
+  display: none;
+}
+
+.logoproj {
+
+  float: left;
+  position: fixed;
+  width: 200px;
+  margin-left: 4.5em;
+  margin-top: 1em;
+
 }
 
 .nav-proj li a {
@@ -321,38 +346,6 @@ ul {
   transition: all 350ms linear;
 }
 
-.nav-proj i {
-  font-size: 1.5em;
-  font-weight: thin;
-}
-
-
-.logo{
-  float: left;
-  position: fixed;
-  width: 250px;
-  margin-left: 4.5em;
-  margin-top: 1.5em;
-  display: none;
-}
-
-.logo2 {
-
-  float: left;
-  position: fixed;
-  width: 200px;
-  margin-left: 4.5em;
-  margin-top: 1em;
-
-}
-
-.logo-main {
-  width:50%;
-}
-
-.logovis {
-  opacity: 0.5;
-}
 
 .hello {
   background: transparent url("../img/headerbg.jpg") no-repeat fixed center;
@@ -641,6 +634,39 @@ ul {
 
 @media only screen and (max-width: 299px){ 
 
+  .nav-proj{
+  height: 5em;
+  padding:0 6em;
+  background-color: #f8f8f8; 
+}
+
+.nav-proj ul {
+  margin-right: 2.5em;
+  float:right;
+}
+
+.nav-proj li{
+  display: inline-block;
+  float: left;
+  padding-top: 1.5em;
+}
+
+.nav-proj li a{
+  display: inline-block;
+  margin-right: 4em;
+  font-size: 1em;
+  line-height: 50px;
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav-proj li a:hover {
+  color:#F2D8A7;
+
+  transition: all 350ms linear;
+}
+
 
 .projdesc {
   padding:1em;
@@ -663,14 +689,12 @@ ul {
   margin-bottom: 1em;
 }
 
-.subs {
-  padding: 1em;
-}
 
   .nav{
     padding:0.5em 1.5em;
     text-align: center;
     float: none;
+    transition: all 400ms linear;
 
   }
 
@@ -703,38 +727,21 @@ ul {
 }
 
   .logo {
-    display: block;
-    float: none;
-    position: relative;
-    width: 100%;
-    margin-left: 0;
+    display: none;
   }
 
+.logow {
+  display: block;
+  float: none;
+  position: relative;
+  width: 100%;
+  margin-left: 0;
+  margin-top: 1em;
+}
 
 .nav.scrolling {
-  background-color: #697076;
-  transition: all 350ms linear;
-  opacity: 0.9;
-  height:70px;
-  padding: 0 1.5em;
-}
 
-.nav.scrolling img {
   display: none;
-}
-
-.nav.scrolling ul {
-  padding:0;
-  margin-top:0em; 
-  transition: all 350ms linear;
-}
-
-.nav.scrolling li a {
-  color:#fff;
-  transition: all 350ms linear;
-  min-width: 50px;
-  font-size: 0.75em;
-  margin-right: 0.25em;
 }
 
 .hello {
@@ -748,7 +755,7 @@ ul {
 }
 
 .ilove {
-  padding:4em 1em 6em;
+  padding:4em 0.5em 6em;
   text-align: center;
   background-color: #f3f5f8;
 }
@@ -758,13 +765,13 @@ ul {
   font-weight: 600;
   text-transform: uppercase;
   color: #35404F;
-  margin: 1em 2em 2.5em;
+  margin: 2em 0;
 
 }
 
 .ilove p {
   padding: 0;
-  font-size: 0.75em;
+  font-size: 0.9em;
 }
 
 .ilove img {
@@ -783,6 +790,7 @@ ul {
   padding:1em 0;
   font-weight: 600;
   color:#35404F;
+  font-size: 1em;
 }
 
 .icons > li {
@@ -791,18 +799,16 @@ ul {
   min-width: 150px;
 }
 
-.icons img {
+/*.icons img {
   width: 100px;
-  opacity: 0;
-  transform: translateY(140px);
-}
+}*/
 
 .work {
-  padding:1em;
+  padding:0;
 }
 
 .work h2 {
-  font-size: 1em;
+  font-size: 1.5em;
   margin: 2em 2em;
 }
 
@@ -813,13 +819,13 @@ ul {
       .item-hover .mask,
       .item-img,
       .item-info {
-        width: 150px;
-        height: 150px;  
+        width: 200px;
+        height: 200px;  
       }
 
     .item-img img {
-      width: 150px;
-      height: 150px;  
+      width: 200px;
+      height: 200px;  
     }
 
         .item-type-line .item-info .headline {
@@ -935,7 +941,11 @@ ul {
     margin-right: 0;
   }
 
-  .logo {
+  .nav.scrolling {
+    display: none;
+  }
+
+  .logow {
     display: block;
     display: inline;
     margin-left: auto;
@@ -944,41 +954,12 @@ ul {
     float:none;
     margin-left: 0;
     transition: all 350ms linear;
+    margin-top: 1em;
+    opacity: 0.75;
   }
 
-.logo-s{
+.logo{
   display: none;
-}
-
-.nav.scrolling {
-  background-color: #697076;
-  transition: all 350ms linear;
-  opacity: 0.9;
-  height:100px;
-  padding: 0 1.5em;
-}
-
-.nav.scrolling img {
-  display: none;
-}
-
-.nav.scrolling ul {
-  padding:0;
-  margin-top:0em; 
-  transition: all 350ms linear;
-}
-
-.nav.scrolling li {
-  padding-top: 1.5em;
-}
-
-.nav.scrolling li a {
-  color:#fff;
-  transition: all 350ms linear;
-  min-width: 50px;
-  font-size: 1em;
-  margin-right:0;
-  padding:0 0.5em;
 }
 
 .hello {
@@ -988,7 +969,7 @@ ul {
 
 
 .ilove p {
-  padding: 1em;
+  padding: 0;
 }
 
 .ilove {
@@ -1002,7 +983,7 @@ ul {
   font-weight: 600;
   text-transform: uppercase;
   color: #35404F;
-  margin: 1em 2em 2.5em;
+  margin: 2.5em 0 1.5em;
 
 }
 
@@ -1049,13 +1030,13 @@ ul {
       .item-hover .mask,
       .item-img,
       .item-info {
-        width: 200px;
-        height: 200px;  
+        width: 220px;
+        height: 220px;  
       }
 
       .item-img img {
-      width: 200px;
-      height: 200px;  
+      width: 220px;
+      height: 220px;  
     }
 
         .item-type-line .item-info .headline {
@@ -1150,6 +1131,10 @@ ul {
   margin-bottom: 1em;
 }
 
+.logow {
+  display: none;
+}
+
   .nav {
     padding: 1em 3em;
   }
@@ -1167,7 +1152,11 @@ ul {
   }
 
   .nav.scrolling {
-    padding: 0 4em;
+    padding: 0 3em;
+  }
+
+  .nav.scrolling li {
+    padding: 1em 0;
   }
 
   .hello {
@@ -1196,6 +1185,10 @@ ul {
   padding:1em 1em 6em;
 }
 
+.icons ul {
+  text-align: center;
+}
+
 .ilove p {
   padding: 1em;
 }
@@ -1205,7 +1198,7 @@ ul {
 }
 
 .icons li {
-  width:25%;
+  width:27.9%;
   min-width: 0;
 }
 
