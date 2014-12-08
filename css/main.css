@@ -757,7 +757,7 @@ ul {
     transition: all 400ms linear;
     position: relative;
     background: transparent url("../img/headerbg.jpg") no-repeat fixed top right;
-    background-size: cover;
+    /*background-size: cover;*/
 
   }
 
@@ -1023,7 +1023,7 @@ ul {
     text-align: center;
     float: none;
     background: transparent url("../img/headerbg.jpg") no-repeat fixed top right;
-    background-size: cover;
+    /*background-size: cover;*/
     position: relative;
 
   }
