@@ -659,45 +659,60 @@ ul {
 
 @media only screen and (max-width: 299px){ 
 
+
 .scroll-top-wrapper.show {
   visibility:visible;
   cursor:pointer;
   opacity: 1;
 }
 
-  .nav-proj{
-  height: 5em;
-  padding:0 6em;
-  background-color: #f8f8f8; 
-}
+  .half {
+    width: 100%;
+    height:100%;
+  }
 
-.nav-proj ul {
-  margin-right: 2.5em;
-  float:right;
-}
+.nav-proj{
+    padding:0.5em 1.5em 2.5em;
+    text-align: center;
+    float: none;
+    transition: all 400ms linear;
+    position: relative;
+    background-color: #f8f8f8;
+    position: fixed;
+  }
 
-.nav-proj li{
-  display: inline-block;
-  float: left;
-  padding-top: 1.5em;
-}
+  .nav-proj ul {
+    margin-top:0.5em;
+    margin-right: 0;
+    float: none;
+  }
 
-.nav-proj li a{
-  display: inline-block;
-  margin-right: 4em;
-  font-size: 1em;
-  line-height: 50px;
-  color: #000;
-  text-transform: uppercase;
-  text-decoration: none;
-}
+  .nav-proj li {
+    float: none;
+    padding-top: 0;
+  }
 
-.nav-proj li a:hover {
+  .nav-proj li a {
+    min-width: 50px;
+    font-size: 1.5em;
+    margin-right: 0.45em;
+  }
+
+  .nav-proj li:last-child a {
+    padding-right: 0;
+    margin-right: 0;
+  }
+
+  .nav-proj li a:hover {
   color:#F2D8A7;
 
   transition: all 350ms linear;
 }
 
+.logoproj {
+  display: none;
+
+}
 
 .projdesc {
   padding:1em;
@@ -762,7 +777,7 @@ ul {
 
 
 
-  .logo {
+.logo {
     display: none;
   }
 
@@ -867,7 +882,6 @@ ul {
 
 .contact {
   padding:4em 1em 1em;
-  margin-top: 4em;
 }
 
 .contact h2 {
@@ -906,6 +920,54 @@ ul {
 }
 
 @media (min-width: 300px) and (max-width: 600px){
+
+  .half {
+    width: 100%;
+    height:100%;
+  }
+
+.nav-proj{
+    padding:0.5em 1.5em 2.5em;
+    text-align: center;
+    float: none;
+    transition: all 400ms linear;
+    position: relative;
+    background-color: #f8f8f8;
+    position: fixed;
+  }
+
+  .nav-proj ul {
+    margin-top:0.5em;
+    margin-right: 0;
+    float: none;
+  }
+
+  .nav-proj li {
+    float: none;
+    padding-top: 0;
+  }
+
+  .nav-proj li a {
+    min-width: 50px;
+    font-size: 1.5em;
+    margin-right: 0.45em;
+  }
+
+  .nav-proj li:last-child a {
+    padding-right: 0;
+    margin-right: 0;
+  }
+
+  .nav-proj li a:hover {
+  color:#F2D8A7;
+
+  transition: all 350ms linear;
+}
+
+.logoproj {
+  display: none;
+
+}
 
 .scroll-top-wrapper.show {
   visibility:visible;
@@ -1085,7 +1147,6 @@ ul {
 
 .contact {
   padding:4em 1em 1em;
-  margin-top: 4em;
 }
 
 .contact h2 {
@@ -1141,8 +1202,26 @@ ul {
 
 }
 
+@media (max-width: 600px) and (min-width: 400px) {
+.nav-proj li {
+float: none;
+padding-top: 0;
+margin: 0 1.5em;
+
+}
+
+}
+
 @media (min-width: 601px) and (max-width: 800px){
 
+.nav-proj {
+  padding:0;
+}
+
+.nav-proj li a {
+  margin-right: 3.5em;
+  font-size: 1.25em;
+}
 
 .projdesc {
   padding:2em;
@@ -1240,6 +1319,19 @@ ul {
 
 @media (min-width: 801px) and (max-width: 950px){
 
+  .nav-proj {
+    padding:0;
+  }
+
+  .nav-proj li a {
+    font-size: 1.5em;
+    margin-right: 4em;
+  }
+
+  .projdesc {
+    padding: 4em;
+  }
+
 
   .nav {
     padding:1em 0 0;
@@ -1293,6 +1385,19 @@ ul {
 
 @media only screen and (min-width: 951px) {
 
+  .nav-proj {
+    padding: 0;
+  }
+
+  .nav-proj li a {
+    font-size: 1.5em;
+    margin-right:4em;
+  }
+
+  .projdesc {
+    padding:4em 5em;
+  }
+
 .ilove {
   padding: 4em 0 6em;
   }
@@ -1311,6 +1416,15 @@ ul {
 }
 
 @media only screen and (min-width: 1200px) {
+
+  .nav-proj {
+    padding:0 3em;
+  }
+
+
+  .projdesc {
+    padding: 4em 10em;
+  }
 
   .ilove p {
   padding:0 14em 4em;
