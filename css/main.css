@@ -613,6 +613,20 @@ ul {
 
 }
 
+.projdesc a {
+  text-decoration: none;
+  color:#3f4c5e;
+  font-size: 1.15em;
+  font-weight: 500;
+}
+
+.projdesc a:hover {
+
+  color:#F2D8A7;
+  transition: all 200ms linear;
+
+}
+
 .projdesc p {
 
   font-size: 1.15em;
