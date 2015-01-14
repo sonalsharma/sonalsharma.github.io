@@ -348,7 +348,7 @@ ul {
 
 
 .hello {
-  background: transparent url("../img/headerbg.jpg") no-repeat fixed center;
+  background: transparent url("../img/headerbg1.jpg") no-repeat fixed center;
   background-size: cover;
   padding:17em 10em 30em;
   text-align: center;
@@ -1226,7 +1226,13 @@ margin: 0 1.5em;
 
 }
 
+
+
 @media (min-width: 601px) and (max-width: 800px){
+
+  .hello {
+    background: transparent url("../img/headerbg4.jpg") no-repeat fixed center;
+  }
 
 .nav-proj {
   padding:0;
