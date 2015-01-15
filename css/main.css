@@ -531,8 +531,8 @@ ul {
 
 .contact {
   text-align: center;
-  background-color: #35404F;
-  background: transparent url("../img/contactbg.jpg") no-repeat fixed bottom;
+  background-color: #4D5464;
+  /*background: transparent url("../img/contactbg.jpg") no-repeat fixed bottom;*/
   background-size: cover;
   padding:4em 10em 1em;
 }
