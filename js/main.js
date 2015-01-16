@@ -40,8 +40,7 @@ $(document).ready(function(){
 
         $('html, body').stop().animate({
             'scrollTop': $target.offset().top
-        }, 1000, 'linear', function () {
-        });
+        }, 900, 'swing');
     });
 });
 
