@@ -217,9 +217,10 @@ ul {
 .nav.scrolling {
   background-color: #f7f7f7;
   transition: all 100ms linear;
-  opacity: 0.8;
+  opacity: 1;
   height:70px;
   padding: 0 6em;
+  box-shadow: 0px 1px 5px #cfcfcf;
 }
 
 .nav.scrolling li {
@@ -362,8 +363,8 @@ ul {
 .ilove {
   padding:1em 6em 4em;
   text-align: center;
-  background-color: #ECDFBD;
-  background: url("../img/ticks.png") repeat repeat;
+  background-color: #FFF;
+  /*background: url("../img/ticks.png") repeat repeat;*/
 }
 
 .ilove h2 {
@@ -419,10 +420,40 @@ ul {
 }
 
 
+.passion {
+  background: transparent url("../img/passion.jpg") no-repeat fixed center;
+  background-size: cover;
+  margin-top: 0;
+  padding: 4em 10em;
+}
+
+
+blockquote {
+color:#fff;
+padding: 3.5rem 1% 5rem;
+
+}
+
+blockquote p {
+  font-size: 2em;
+  line-height: 1.5em;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+cite {
+  color: #fff;
+  float:right;
+  margin-top: 1.5rem;
+  font-weight: 400;
+}
+
+
 .work {
   padding:3em;
   padding-bottom: 5em;
   text-align: center;
+  background-color: #FFF;
 }
 
 .work h2 {
@@ -529,9 +560,10 @@ ul {
 
 /* end hover */
 
+
 .contact {
   text-align: center;
-  background-color: #4D5464;
+  background-color: #242830;
   /*background: transparent url("../img/contactbg.jpg") no-repeat fixed bottom;*/
   background-size: cover;
   padding:4em 10em 1em;
@@ -673,6 +705,14 @@ ul {
 
 @media only screen and (max-width: 299px){ 
 
+  .passion {
+    padding:2em;
+  }
+
+  blockquote p {
+    font-size: 1em;
+  }
+
 
 .scroll-top-wrapper.show {
   visibility:visible;
@@ -756,7 +796,7 @@ ul {
     float: none;
     transition: all 400ms linear;
     position: relative;
-    background: transparent url("../img/headerbg.jpg") no-repeat fixed top right;
+    background: transparent url("../img/headerbg4.jpg") no-repeat fixed top right;
     /*background-size: cover;*/
 
   }
@@ -934,6 +974,14 @@ ul {
 }
 
 @media (min-width: 300px) and (max-width: 600px){
+
+  .passion {
+    padding:1em 3em;
+  }
+
+  blockquote p {
+    font-size: 1.5em;
+  }
 
   .half {
     width: 100%;
@@ -1229,6 +1277,10 @@ margin: 0 1.5em;
 
 
 @media (min-width: 601px) and (max-width: 800px){
+
+  .passion {
+    padding:2em;
+  }
 
   .hello {
     background: transparent url("../img/headerbg4.jpg") no-repeat fixed center;
