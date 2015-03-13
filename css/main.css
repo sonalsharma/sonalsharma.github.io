@@ -796,7 +796,7 @@ cite {
     float: none;
     transition: all 400ms linear;
     position: relative;
-    background: transparent url("../img/headerbg4.jpg") no-repeat fixed top right;
+    /*background: transparent url("../img/headerbg4.jpg") no-repeat fixed top right;*/
     /*background-size: cover;*/
 
   }
@@ -816,6 +816,7 @@ cite {
     min-width: 50px;
     font-size: 0.75em;
     margin-right: 0.45em;
+    color:#a33153;
   }
 
   .nav li:last-child a {
@@ -1070,8 +1071,8 @@ cite {
     padding:0.5em 1.5em 4.5em;
     text-align: center;
     float: none;
-    background: transparent url("../img/headerbg.jpg") no-repeat fixed top right;
-    /*background-size: cover;*/
+    /*background: transparent url("../img/headerbg.jpg") no-repeat fixed top right;*/
+    background-color: #fff;
     position: relative;
 
   }
@@ -1092,6 +1093,7 @@ cite {
     min-width: 50px;
     font-size: 1em;
     margin-right: 1em;
+    color: #a33153;
   }
 
   .nav li a:hover {
@@ -1119,7 +1121,7 @@ cite {
     margin-left: 0;
     transition: all 350ms linear;
     margin-top: 1em;
-    opacity: 0.75;
+   
   }
 
 .logo{
@@ -1283,7 +1285,7 @@ margin: 0 1.5em;
   }
 
   .hello {
-    background: transparent url("../img/headerbg4.jpg") no-repeat fixed center;
+    /*background: transparent url("../img/headerbg4.jpg") no-repeat fixed center;*/
   }
 
 .nav-proj {
