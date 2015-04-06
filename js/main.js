@@ -57,22 +57,22 @@ jQuery(document).ready(function() {
        });
 
     jQuery('.bounce1').addClass("hideme").viewportChecker({
-        classToAdd: 'visible animated bounceInUp',
+        classToAdd: 'visible animated bounceIn',
         offset: 100
        });
 
     jQuery('.bounce2').addClass("hideme").viewportChecker({
-        classToAdd: 'visible animated bounceInUp',
+        classToAdd: 'visible animated bounceIn',
         offset: 190
        });
 
     jQuery('.bounce3').addClass("hideme").viewportChecker({
-        classToAdd: 'visible animated bounceInUp',
+        classToAdd: 'visible animated bounceIn',
         offset: 250
        });
 
     jQuery('.bounce4').addClass("hideme").viewportChecker({
-        classToAdd: 'visible animated bounceInUp',
+        classToAdd: 'visible animated bounceIn',
         offset: 320
        });
 
