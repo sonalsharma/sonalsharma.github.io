@@ -5,7 +5,7 @@ var $iLove = $('.ilove');
 var $icons = $('.icons img');
 var iLoveOffset = $iLove.offset();
 
-	$(window).scroll(function() {    
+	/*$(window).scroll(function() {    
 	    var scroll = $(window).scrollTop();
 
 	    if (scroll >= 20) {
@@ -14,7 +14,7 @@ var iLoveOffset = $iLove.offset();
 	        $(".nav").removeClass("scrolling");
 	    }
 
-	});
+	});*/
 
     $iLove.waypoint(function() {
     $icons.addClass('icons-animate');
@@ -51,6 +51,11 @@ $(document).ready(function(){
 
 jQuery(document).ready(function() {
 
+    jQuery('.hello').addClass("hideme").viewportChecker({
+        classToAdd: 'visible',
+        offset: 100
+       });
+
     jQuery('.post').addClass("hideme").viewportChecker({
         classToAdd: 'visible animated fadeIn',
         offset: 100
@@ -82,78 +87,29 @@ jQuery(document).ready(function() {
        });
 
      jQuery('.quote').addClass("hideme").viewportChecker({
-        classToAdd: 'visible animated fadeInLeft',
-        offset: 100
+        classToAdd: 'visible animated fadeInUp',
+        offset: 300
        });
 });
 
-/* Scroll to top for mobile */ 
-$(function(){
- 
-    $(document).on( 'scroll', function(){
- 
-        if ($(window).scrollTop() > 100) {
-            $('.scroll-top-wrapper').addClass('show');
-        } else {
-            $('.scroll-top-wrapper').removeClass('show');
-        }
-    });
- 
-    $('.scroll-top-wrapper').on('click', scrollToTop);
-});
- 
-function scrollToTop() {
-    verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
-    element = $('body');
-    offset = element.offset();
-    offsetTop = offset.top;
-    $('html, body').animate({scrollTop: offsetTop}, 500, 'linear');
-}
-
-/* ---------------------------------------------------------- */
-
-
-
-/*$(document).ready(function() {
-    
-    // Portfolio section 
-    
-    // Toggle a portfolio item
-    $('.portfolio-work a').click(function() {
-        $('.portfolio-details .portfolio-item').hide();
-        
-        var itemId = $(this).attr('href');
-        $(itemId).show();
-        
-        if ($('.portfolio-details').css('display') == 'none') {
-            $('.portfolio-details').slideDown();
-        }
-        
-       $.smoothScroll({
-          scrollTarget: '#portfolio-details',
-          offset: -300
-        });
-
-        return false;
-
-        
-    });
-
-    
-    // Close portfolio
-    $('#close-portfolio').click(function() {
-        $('.portfolio-details').slideUp();
-        return false;
-    });
-    // END - Portfolio section  
-    
+$('.menu, .menu-x').click(function() {
+   $('.mobilenav').toggleClass("active");
+   $('.menu').toggleClass("menuhide");
+   $('.menu-x').toggleClass("menuhide");
 });
 
-$(window).load(function() {
-  $('.flexslider').flexslider({
-    animation: "slide"
-  });
-});*/
+/* Animated svg */ 
+
+var hi = new Vivus('hi-there', {type: 'delayed', duration: 150, start: 'autostart', forceRender: false, dashGap: 20}, function () {
+                    if (window.console) {
+                        console.log('Animation finished. [log triggered from callback]');
+                    }
+                }),
+                obt1 = new Vivus('obturateur1', {type: 'delayed', duration: 150}),
+                obt2 = new Vivus('obturateur2', {type: 'async', duration: 150}),
+                obt3 = new Vivus('obturateur3', {type: 'oneByOne', duration: 150}),
+                pola = new Vivus('polaroid', {type: 'scenario-sync', duration: 20, forceRender: false});
+
 
 
 
