@@ -88,7 +88,7 @@ jQuery(document).ready(function() {
 
      jQuery('.quote').addClass("hideme").viewportChecker({
         classToAdd: 'visible animated fadeIn',
-        offset: 300
+        offset: 100
        });
 });
 
