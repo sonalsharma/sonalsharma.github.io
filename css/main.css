@@ -196,8 +196,8 @@ video#bgvid {
   padding:1em 8em 0;
   letter-spacing: 2px;
   color:#fff;
-  -webkit-animation-delay: 2s; /* Chrome, Safari, Opera */
-    animation-delay: 2s;
+  -webkit-animation-delay: 1s; /* Chrome, Safari, Opera */
+    animation-delay: 1s;
 }
 
 
