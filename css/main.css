@@ -524,8 +524,8 @@ video#bgvid {
     text-align: center;
     width:120px;
     height:75px;
-    margin-top: 1em;
     animation-delay:2.5s;
+    margin: 1em auto 0;
 }
 
 
