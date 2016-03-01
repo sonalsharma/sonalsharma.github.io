@@ -90,6 +90,31 @@ jQuery(document).ready(function() {
         classToAdd: 'visible animated fadeInUp',
         offset: 100
        });
+
+     jQuery('.adp').addClass("hideme").viewportChecker({
+        classToAdd: 'visible animated fadeInLeft',
+        offset: 100
+       });
+
+     jQuery('.adp2').addClass("hideme").viewportChecker({
+        classToAdd: 'visible animated fadeInLeft',
+        offset: 100
+       });
+
+     jQuery('.adp3').addClass("hideme").viewportChecker({
+        classToAdd: 'visible animated fadeInLeft',
+        offset: 100
+       });
+
+     jQuery('.adp4').addClass("hideme").viewportChecker({
+        classToAdd: 'visible animated fadeInLeft',
+        offset: 100
+       });
+
+     jQuery('.adp5').addClass("hideme").viewportChecker({
+        classToAdd: 'visible animated fadeInUp',
+        offset: 100
+       });
 });
 
 $('.menu, .menu-x').click(function() {

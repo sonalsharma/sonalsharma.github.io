@@ -469,5 +469,65 @@ video#bgvid {
   }
 }
 
+.ad {
+  width:160px;
+  height:600px;
+  background-color: #56713C;
+  margin:1em auto;
+  padding:1em;
+  color:#fff;
+  font-size: 1.1em;
+  font-weight: 500;
+  line-height: 1.45em;
+}
+
+.ad p {
+  margin-bottom: 1.25em;
+}
+
+.ad ul {
+  list-style-type: circle;
+  margin-left: 1em;
+  margin-bottom: 1.5em;
+}
+
+.ad li {
+  font-weight: 500;
+  font-size: 0.9em;
+  line-height: 1.5em;
+  padding-bottom: 0.5em;
+}
+
+.ad a {
+  color:#3b3b3b;
+  font-size: 0.8em;
+  text-decoration: none;
+
+}
+
+.adp2 {
+  animation-delay:1s;
+}
+
+.adp3 {
+  animation-delay:1.5s;
+}
+
+.adp4 {
+  animation-delay:2s;
+}
+
+.adp5 {
+    border: 1px solid #fff;
+    background-color: #fff;
+    padding:0.5em;
+    text-align: center;
+    width:120px;
+    height:75px;
+    margin-top: 1em;
+    animation-delay:2.5s;
+}
+
+
 
 
