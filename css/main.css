@@ -41,12 +41,21 @@ ul {
 .nav{
 
   width: 100%;
-  /*height: 8em;*/
+  height: 50px;
   top: 0;
   z-index: 999;
   padding:0 8em;
   transition: all 100ms linear;
+  position: fixed;
+  background-color: #fff;
 }
+
+@media screen and (max-width: 800px) {
+   .nav {
+    background: none;
+   }
+  }
+
 
 .nav i {
   color:#fff;
@@ -70,43 +79,41 @@ ul {
 }
 
 .nav ul {
-  margin-right: 2.5em;
-  float:right;
+  text-align: center;
 }
 
 .nav li{
   display: inline-block;
-  float: left;
-  padding-top: 1.5em;
+  padding-top:0;
 }
 
 .nav li a{
   display: inline-block;
-  /*min-width: 120px;*/
-  margin-right: 4em;
-  margin-top: .6em;
-  font-size: 1em;
+  min-width: 120px;
+  margin:0 2em;
+  margin-top: .2em;
+  font-size: 0.85em;
   line-height: 40px;
-  color: #fff;
+  color: #464646;
   text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
   font-weight: 700;
 }
 
 .nav li a:hover {
-  border-bottom: 3px solid #fff;
+  color:#C94757;
   transition: all 150ms linear;
 }
 
 .logo{
-  display: block;
+  display: none;
   float: left;
-  margin-top: 1.25em;
+  margin-top: 0;
   margin-left: 5em;
-  font-size: 1.25em;
+  font-size: 1.15em;
   line-height: 50px;
-  color: #fff;
+  color: #464646;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 2px;
@@ -171,20 +178,21 @@ video#bgvid {
     background-size: cover; 
 }
 
-@media screen and (max-width: 800px) {
+/*@media screen and (max-width: 800px) {
     html {
          background: url(../img/blurry-night/snapshots/blurry-night.jpg) #000 no-repeat bottom center fixed;
     }
     #bgvid {
         display: none;
     }
-}
+}*/
 
 
 .hello {
 
-  padding:13em 0 8em;
+  padding:11em 0 10em;
   text-align: center;
+  background: url(../img/background.jpg) no-repeat top center fixed;
 
 }
 
@@ -195,9 +203,13 @@ video#bgvid {
   font-weight: 500;
   padding:1em 8em 0;
   letter-spacing: 2px;
-  color:#fff;
+  color:#464646;
   -webkit-animation-delay: 1s; /* Chrome, Safari, Opera */
   animation-delay: 1s;
+}
+
+.hello a {
+  color:#C94757;
 }
 
 
@@ -209,6 +221,7 @@ video#bgvid {
 .web img {
   width:100%;
   padding:1em;
+  float:left;
 }
 
 .project1 {
@@ -275,18 +288,17 @@ video#bgvid {
 
 
 .work {
-  padding:6em 0 0;
   text-align: center;
 
 }
 
 .contact {
   text-align: center;
-  background: url(../img/blurry-night/snapshots/blurry-night.jpg) no-repeat center center fixed;
+  background: url(../img/background.jpg) no-repeat top fixed;
 }
 
 .contact h2 {
-  color:#fff;
+  color:#464646;
   font-size: 2em;
   margin-bottom: 1em;
   text-transform: uppercase;
@@ -294,14 +306,14 @@ video#bgvid {
 }
 
 .contact p {
-  color:#fff;
+  color:#464646;
   font-size: 1em;
-  margin-bottom: 1em;
+  padding-bottom: 1em;
 }
 
 .contact a {
 
-  color:#fff;
+  color:#464646;
   text-decoration: none;
   font-size: 1em;
   font-weight: 600;
@@ -314,7 +326,7 @@ video#bgvid {
 }
 
 .social {
-  color: #fff;
+  color: #C94757;
   padding: 1.5em 0;
   font-size: 1.5em;
 }
