@@ -122,8 +122,11 @@ font-family: 'Playfair Display', serif;
 
   color:#464646;
   text-decoration: none;
-  font-size: 0.9em;
 
+}
+
+.email {
+  font-size:0.9em;
 }
 
 .contact a:hover {
