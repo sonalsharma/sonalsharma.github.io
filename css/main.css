@@ -83,6 +83,7 @@ background-color:#fff;
 .hello p {
   font-size:1.15em;
   line-height:2em;
+  padding:0 3em;
 }
 
 .hello h1 {
@@ -167,22 +168,10 @@ font-family: 'Playfair Display', serif;
     margin-top:1.5em;
     padding:0;
   }
-
-.background {
-width:100%;
-float:none;
-opacity:0.1;
-background: url(../img/sonal2.jpg) no-repeat bottom center;
--ms-background-size: cover;
--o-background-size: cover;
--moz-background-size: cover;
--webkit-background-size: cover;
-background-size: cover;
+.content {
+  width:100%;
 }
 
-  .content {
-    width:100%;
-    padding:1em 2em;
-  }
-
+.background {
+display:none;
 }
