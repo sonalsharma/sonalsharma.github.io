@@ -1,15 +1,12 @@
 body {
 	margin: 0;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Open Sans', sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color:#464646;
-}
-
-body, html {
-  height:100%;
-  width:100%;
+  background-color: #fff;
+  text-align: center;
 }
 
 ul {
@@ -40,9 +37,9 @@ ul {
     clear: both;
 }
 
-.clearfix {  
-    *zoom: 1;  
-}  
+.clearfix {
+    *zoom: 1;
+}
 
 
 .active {
@@ -59,37 +56,24 @@ ul {
 }
 
 .content {
-  width:50%;
-  padding:1em;
-  text-align: center;
-}
-
-.background {
-height:100%;
-width:50%;
-position:fixed;
-right:0;
-float:right;
-background: url(../img/sonal2.jpg) no-repeat right top fixed;
--ms-background-size: contain;
--o-background-size: contain;
--moz-background-size: contain;
--webkit-background-size: contain;
-background-size: contain;
-background-color:#fff;
+padding:4em 1em;
+text-align: center;
+width: 475px;
+margin: 4em auto 0;
 }
 
 
 .hello p {
-  font-size:1.15em;
-  line-height:2em;
-  padding:0 3em;
+font-size: 0.75em;
+font-weight: 600;
+opacity: 0.7;
+text-transform: uppercase;
+letter-spacing: 1px;
+margin: 2em auto;
 }
 
 .hello h1 {
-  margin-top:3em;
 font-size:3.5em;
-padding:1em 0 0;
 font-family: 'Playfair Display', serif;
 }
 
@@ -100,18 +84,20 @@ font-family: 'Playfair Display', serif;
   opacity:0.7;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin:1em auto 3em;
+  margin:2em auto;
+  line-height: 2em;
 }
 
-.hello p a {
+.spacing {
+  padding-top: 2em;
+}
+
+.hello h2 a {
+  font-family: 'Open Sans', sans-serif;
   color:#C94757;
   text-decoration: underline;
 }
 
-.contact {
-  text-align: center;
-  padding:1em;
-}
 
 .contact p {
   color:#464646;
@@ -139,9 +125,15 @@ font-family: 'Playfair Display', serif;
   color: #C94757;
   padding: 1.5em 0;
   font-size: 0.9em;
+  font-family: 'Playfair Display', serif;
+}
+
+.social .nocolor {
+  color: #464646;
 }
 
 .social li{
+  color: #C94757;
   display: inline;
   padding:0
 }
@@ -151,27 +143,8 @@ font-family: 'Playfair Display', serif;
   transition: all 200ms linear;
 }
 
-.footer{
-  padding: 5em 0 1em;
-  color:#464646;
-  font-size: 0.65em;
-  opacity:0.7;
-}
-
-.footer i{
-  color:#C94757;
-}
-
-@media only screen and (max-width:768px) {
-
-  .hello h1 {
-    margin-top:1.5em;
-    padding:0;
+@media only screen and (max-width: 520px) {
+  .content {
+    width: 100%;
   }
-.content {
-  width:100%;
-}
-
-.background {
-display:none;
 }
