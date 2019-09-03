@@ -1,22 +1,21 @@
 # TEAM
 
 Designer & developer: Sonal Sharma
-Site: http://sonalsharma.ca
+Site: https://sonalsharma.ca
 Github: http://github.com/sonalsharma
-Twitter: @sharmasonalx
-Email: info@sonalsharma.ca
+Email: sonalsharma@live.ca
 Location: Ottawa, Canada
 
 ---
 
 # THANKS
 
-THANKS TO MAHSELF.
+To Earl Grey tea, what would I do without you?
 
 ---
 
 # TECHNOLOGY
 
-- Sublime Text
+- VSCODE
 - Github
 - My brain
